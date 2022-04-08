@@ -1,0 +1,23 @@
+@mixin display-flex ($wrap: wrap, $direction: row, $justify: space-between, $align: center) {
+    display: flex;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin  transition-ease {
+    transition: all 0.5s ease-in-out;  
+}
+@mixin text-style ($family, $size, $weight, $height, $spacing, $color) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $spacing;
+    color: $color;
+}
+@mixin set-box ($width, $height) {
+    max-width: $width;
+    width: 100%;
+    height: $height;
+}
