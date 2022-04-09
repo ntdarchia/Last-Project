@@ -137,6 +137,20 @@ a {
   font-style: normal;
 }
 
+.home-section .container, .services-section .container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.button-basic, .home-section .container .cover-image .cover-text button, .services-section .container .services-section-wrapper .services-section-text-wrapper button {
+  background: none;
+  border: none;
+  padding: 20px 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
 .headerDiv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,23 +225,23 @@ a {
   margin-top: 30px;
 }
 
-.home-section .cover-image {
+.home-section .container .cover-image {
   position: relative;
   margin-bottom: 50px;
 }
 
-.home-section .cover-image img {
+.home-section .container .cover-image img {
   width: 100%;
   height: 100%;
 }
 
-.home-section .cover-image .cover-text {
+.home-section .container .cover-image .cover-text {
   position: absolute;
   top: 400px;
   right: 150px;
 }
 
-.home-section .cover-image .cover-text .title {
+.home-section .container .cover-image .cover-text .title {
   font-family: "robotoregular", sans-serif;
   font-size: 60px;
   font-weight: bold;
@@ -280,7 +294,7 @@ a {
   }
 }
 
-.home-section .cover-image .cover-text p {
+.home-section .container .cover-image .cover-text p {
   font-family: "robotothin_italic", sans-serif;
   font-size: 18px;
   font-weight: normal;
@@ -290,10 +304,7 @@ a {
   margin-bottom: 40px;
 }
 
-.home-section .cover-image .cover-text button {
-  background: none;
-  padding: 20px 40px;
-  cursor: pointer;
+.home-section .container .cover-image .cover-text button {
   border: 2px solid #fff;
   font-family: "robotoregular", sans-serif;
   font-size: 16px;
@@ -305,21 +316,21 @@ a {
   transition: all 0.5s ease-in-out;
 }
 
-.home-section .cover-image .cover-text button:hover {
+.home-section .container .cover-image .cover-text button:hover {
   background-color: #fff;
   color: black;
 }
 
-.home-section .home-section-text-wrapper {
+.home-section .container .home-section-text-wrapper {
   margin-bottom: 50px;
 }
 
-.home-section .home-section-text-wrapper h3, .home-section .home-section-text-wrapper p {
+.home-section .container .home-section-text-wrapper h3, .home-section .container .home-section-text-wrapper p {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.home-section .home-section-text-wrapper h3 {
+.home-section .container .home-section-text-wrapper h3 {
   font-family: "robotoregular", sans-serif;
   font-size: 60px;
   font-weight: bold;
@@ -327,7 +338,7 @@ a {
   color: #000;
 }
 
-.home-section .home-section-text-wrapper p {
+.home-section .container .home-section-text-wrapper p {
   font-family: "robotothin_italic", sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -336,7 +347,7 @@ a {
   color: #000;
 }
 
-.home-section .home-section-text-wrapper .linkDiv {
+.home-section .container .home-section-text-wrapper .linkDiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,7 +365,7 @@ a {
           align-items: center;
 }
 
-.home-section .home-section-text-wrapper .linkDiv h4 {
+.home-section .container .home-section-text-wrapper .linkDiv h4 {
   font-family: "robotothin_italic", sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -364,7 +375,7 @@ a {
   margin-right: 10px;
 }
 
-.home-section .home-section-text-wrapper .linkDiv a {
+.home-section .container .home-section-text-wrapper .linkDiv a {
   text-decoration: underline;
   font-family: "robotolight", sans-serif;
   font-size: 16px;
@@ -376,11 +387,11 @@ a {
   transition: all 0.5s ease-in-out;
 }
 
-.home-section .home-section-text-wrapper .linkDiv a:hover {
+.home-section .container .home-section-text-wrapper .linkDiv a:hover {
   text-decoration: none;
 }
 
-.home-section .home-section-box-wrapper {
+.home-section .container .home-section-box-wrapper {
   width: 90%;
   height: auto;
   margin: 0px auto;
@@ -400,7 +411,7 @@ a {
           align-items: center;
 }
 
-.home-section .home-section-box-wrapper .box-1, .home-section .home-section-box-wrapper .box-2, .home-section .home-section-box-wrapper .box-3, .home-section .home-section-box-wrapper .box-4 {
+.home-section .container .home-section-box-wrapper .box-1, .home-section .container .home-section-box-wrapper .box-2, .home-section .container .home-section-box-wrapper .box-3, .home-section .container .home-section-box-wrapper .box-4 {
   max-width: 23%;
   width: 100%;
   height: 250px;
@@ -408,17 +419,16 @@ a {
   background-color: #dce7ec;
 }
 
-.home-section .home-section-box-wrapper .box-1 .box-head, .home-section .home-section-box-wrapper .box-2 .box-head, .home-section .home-section-box-wrapper .box-3 .box-head, .home-section .home-section-box-wrapper .box-4 .box-head {
-  margin-top: 30px;
-}
-
-.home-section .home-section-box-wrapper .box-1 .box-head svg, .home-section .home-section-box-wrapper .box-2 .box-head svg, .home-section .home-section-box-wrapper .box-3 .box-head svg, .home-section .home-section-box-wrapper .box-4 .box-head svg {
+.home-section .container .home-section-box-wrapper .box-1 .box-head svg, .home-section .container .home-section-box-wrapper .box-2 .box-head svg, .home-section .container .home-section-box-wrapper .box-3 .box-head svg, .home-section .container .home-section-box-wrapper .box-4 .box-head svg {
   width: 60px;
   height: 60px;
   fill: #546166;
+  margin-top: 30px;
+  -webkit-transition: top 5s ease-in-out;
+  transition: top 5s ease-in-out;
 }
 
-.home-section .home-section-box-wrapper .box-1 .box-body h2, .home-section .home-section-box-wrapper .box-2 .box-body h2, .home-section .home-section-box-wrapper .box-3 .box-body h2, .home-section .home-section-box-wrapper .box-4 .box-body h2 {
+.home-section .container .home-section-box-wrapper .box-1 .box-body h2, .home-section .container .home-section-box-wrapper .box-2 .box-body h2, .home-section .container .home-section-box-wrapper .box-3 .box-body h2, .home-section .container .home-section-box-wrapper .box-4 .box-body h2 {
   margin-top: 20px;
   font-family: "robotolight", sans-serif;
   font-size: 20px;
@@ -428,7 +438,7 @@ a {
   color: #546166;
 }
 
-.home-section .home-section-box-wrapper .box-1 .box-body p, .home-section .home-section-box-wrapper .box-2 .box-body p, .home-section .home-section-box-wrapper .box-3 .box-body p, .home-section .home-section-box-wrapper .box-4 .box-body p {
+.home-section .container .home-section-box-wrapper .box-1 .box-body p, .home-section .container .home-section-box-wrapper .box-2 .box-body p, .home-section .container .home-section-box-wrapper .box-3 .box-body p, .home-section .container .home-section-box-wrapper .box-4 .box-body p {
   margin-top: 20px;
   font-family: "robotolight", sans-serif;
   font-size: 16px;
@@ -436,5 +446,107 @@ a {
   line-height: 20px;
   letter-spacing: 1px;
   color: #546166;
+}
+
+.home-section .container .home-section-box-wrapper .box-1:hover h2, .home-section .container .home-section-box-wrapper .box-1:hover p, .home-section .container .home-section-box-wrapper .box-2:hover h2, .home-section .container .home-section-box-wrapper .box-2:hover p, .home-section .container .home-section-box-wrapper .box-3:hover h2, .home-section .container .home-section-box-wrapper .box-3:hover p, .home-section .container .home-section-box-wrapper .box-4:hover h2, .home-section .container .home-section-box-wrapper .box-4:hover p {
+  color: #000;
+}
+
+.home-section .container .home-section-box-wrapper .box-1:hover svg, .home-section .container .home-section-box-wrapper .box-2:hover svg, .home-section .container .home-section-box-wrapper .box-3:hover svg, .home-section .container .home-section-box-wrapper .box-4:hover svg {
+  position: relative;
+  top: -4px;
+  fill: #707c81;
+}
+
+.services-section {
+  padding: 50px 0px;
+}
+
+.services-section .container .firstBall {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #dce7ec;
+  margin: 100px;
+}
+
+.services-section .container .services-section-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services-section .container .services-section-wrapper .services-section-text-wrapper h2, .services-section .container .services-section-wrapper .services-section-text-wrapper p {
+  margin-bottom: 30px;
+}
+
+.services-section .container .services-section-wrapper .services-section-text-wrapper h2 {
+  font-family: "robotobold", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #546166;
+}
+
+.services-section .container .services-section-wrapper .services-section-text-wrapper p {
+  font-family: "robotolight", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #000;
+}
+
+.services-section .container .services-section-wrapper .services-section-text-wrapper button {
+  background-color: #aec5cd;
+  font-family: "robotoregular", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: #000;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.services-section .container .services-section-wrapper .services-section-text-wrapper button:hover {
+  background-color: #80939a;
+  color: #fff;
+}
+
+.services-section .container .services-section-wrapper .services-section-banner {
+  position: relative;
+}
+
+.services-section .container .services-section-wrapper .services-section-banner img {
+  border-radius: 50%;
+}
+
+.services-section .container .services-section-wrapper .services-section-banner .responsive {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.services-section .container .services-section-wrapper .services-section-banner .secondBall {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  background-color: #aec5cd;
+  position: absolute;
+  bottom: -90px;
+  right: -50px;
 }
 /*# sourceMappingURL=global.css.map */

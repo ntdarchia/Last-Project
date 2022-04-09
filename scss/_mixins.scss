@@ -5,7 +5,7 @@
     justify-content: $justify;
     align-items: $align;
 }
-@mixin  transition-ease {
+@mixin  transition-ease-in-out {
     transition: all 0.5s ease-in-out;  
 }
 @mixin text-style ($family, $size, $weight, $height, $spacing, $color) {
@@ -20,4 +20,10 @@
     max-width: $width;
     width: 100%;
     height: $height;
+}
+@mixin set-ball ($width, $height, $color) {
+    border-radius: 50%;
+    width: $width;
+    height: $height;
+    background-color: $color;
 }

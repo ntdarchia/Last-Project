@@ -1,0 +1,12 @@
+%container {
+    max-width: $container-size-lg;
+    width: 100%;
+    margin: 0 auto;
+}
+.button-basic {
+    background: none;
+    border: none;
+    padding: 20px 40px;
+    text-align: center;
+    cursor: pointer;
+}

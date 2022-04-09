@@ -3,7 +3,7 @@
     margin-top: 30px;
     a {
         @include text-style ($italic-font, 25px, bold, 20px, 1px, $logo-color);
-        @include transition-ease;
+        @include transition-ease-in-out;
         &:hover {
             color: $hover-color;
         }
@@ -15,7 +15,7 @@
                margin-right: 30px;
                & > a {
                    @include text-style ($light-font, 18px, normal, 20px, 0px, $nav-color);
-                   @include transition-ease;
+                   @include transition-ease-in-out;
                    &:hover {
                        color: $hover-color;
                    }
@@ -27,112 +27,178 @@
 // end Header Section
 .home-section {
     margin-top: 30px;
-    .cover-image {
-        position: relative;
-        margin-bottom: 50px;
-        img {
-            width: 100%;
-            height: 100%;
+    .container {
+        @extend %container;
+        .cover-image {
+            position: relative;
+            margin-bottom: 50px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        .cover-text {
+            position: absolute;
+            top: 400px;
+            right: 150px;
+            .title {
+                @include text-style ($main-font, 60px, bold, null, 4px, #fff);
+                margin-bottom: 40px;
+                width: 0;
+                overflow: hidden;
+                border-right: 3px solid #fff;
+                white-space: nowrap;
+                animation: typewriter 4.5s steps(40, end), blinking-cursor 0.8s infinite;
+                animation-iteration-count: infinite;        
+            }
+                @keyframes typewriter {
+                from {
+                    width: 0
+                    }
+                    to {
+                    width: 100%
+                    }
+            }
+                @keyframes blinking-cursor {
+                from { border-color: transparent }
+                to { border-color: #fff }
+                }
+            p {
+                @include text-style ($italic-font, 18px, normal, 20px, 0px, #fff);
+                margin-bottom: 40px;
+            }
+            button {
+                @extend .button-basic;
+                border: 2px solid #fff;
+                @include text-style ($main-font, $btn-text-size, normal, 20px, 2px, #fff);
+                @include transition-ease-in-out;
+                    &:hover {
+                        background-color: #fff;
+                        color: black;
+                    }
+                }
+            }
         }
-    .cover-text {
-        position: absolute;
-        top: 400px;
-        right: 150px;
-        .title {
-            @include text-style ($main-font, 60px, bold, null, 4px, #fff);
-            margin-bottom: 40px;
-            width: 0;
-            overflow: hidden;
-            border-right: 3px solid #fff;
-            white-space: nowrap;
-            animation: typewriter 4.5s steps(40, end), blinking-cursor 0.8s infinite;
-            animation-iteration-count: infinite;        
-        }
-         @keyframes typewriter {
-            from {
-                width: 0
-              }
-              to {
-                width: 100%
-              }
-        }
-         @keyframes blinking-cursor {
-            from { border-color: transparent }
-            to { border-color: #fff }
-          }
-        p {
-            @include text-style ($italic-font, 18px, normal, 20px, 0px, #fff);
-            margin-bottom: 40px;
-        }
-        button {
-            background: none;
-            padding: 20px 40px;
-            cursor: pointer;
-            border: 2px solid #fff;
-            @include text-style ($main-font, 16px, normal, 20px, 2px, #fff);
-            @include transition-ease;
+        .home-section-text-wrapper {
+            margin-bottom: 50px;
+            h3, p {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            h3 {
+                @include text-style ($main-font, 60px, bold, null, 1px, #000);
+            }
+            p {
+                @include text-style ($italic-font, $paragraph-size, normal, 22px, 0px, #000);
+            }
+            .linkDiv {
+                @include display-flex (nowrap, row, center, center);
+                h4 {
+                    @include text-style ($italic-font, 16px, normal, 22px, 0px, #000);
+                    margin-right: 10px;
+                }
+                a {
+                    text-decoration: underline;
+                    @include text-style ($light-font, 16px, normal, 22px, 0px, #000);
+                    @include transition-ease-in-out;
                 &:hover {
-                    background-color: #fff;
-                    color: black;
+                    text-decoration: none;
+                }
                 }
             }
         }
-    }
-    .home-section-text-wrapper {
-        margin-bottom: 50px;
-        h3, p {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        h3 {
-            @include text-style ($main-font, 60px, bold, null, 1px, #000);
-        }
-        p {
-            @include text-style ($italic-font, 16px, normal, 22px, 0px, #000);
-        }
-       .linkDiv {
-           @include display-flex (nowrap, row, center, center);
-           h4 {
-               @include text-style ($italic-font, 16px, normal, 22px, 0px, #000);
-               margin-right: 10px;
-           }
-           a {
-               text-decoration: underline;
-               @include text-style ($light-font, 16px, normal, 22px, 0px, #000);
-               @include transition-ease;
-            &:hover {
-                text-decoration: none;
+        .home-section-box-wrapper {
+            width: 90%;
+            height: auto;
+            margin: 0px auto;
+            @include display-flex (wrap, row, space-around, center); 
+            .box-1, .box-2, .box-3, .box-4 {
+                @include set-box (23%, 250px);
+                text-align: center;
+                background-color: $box-color;
+                .box-head {
+                    svg {
+                        width: 60px;
+                        height: 60px;
+                        fill: $icon-color;
+                        margin-top: 30px;
+                        transition: top 5s ease-in-out;
+                    }  
+                }
+                .box-body {
+                    h2 {
+                        margin-top: 20px;
+                        @include text-style ($light-font, 20px, normal, 20px, 3px, $icon-color);
+                    }
+                    p {
+                        margin-top: 20px;
+                        @include text-style ($light-font, $paragraph-size, normal, 20px, 1px, $icon-color);
+                    }     
+                }
             }
-           }
-       }
-    }
-    .home-section-box-wrapper {
-        width: 90%;
-        height: auto;
-        margin: 0px auto;
-        @include display-flex (wrap, row, space-around, center); 
-        .box-1, .box-2, .box-3, .box-4 {
-            @include set-box (23%, 250px);
-            text-align: center;
-            background-color: $box-color;
-            .box-head {
-                margin-top: 30px;
+            .box-1:hover, .box-2:hover, .box-3:hover, .box-4:hover {
+                h2, p {
+                    color: #000;
+                }
                 svg {
-                    width: 60px;
-                    height: 60px;
-                    fill: $icon-color;
+                    position: relative;
+                    top: -4px;
+                    fill: $icon-hover;
+                    
                 }
-            }
-            .box-body {
-                h2 {
-                    margin-top: 20px;
-                    @include text-style ($light-font, 20px, normal, 20px, 3px, $icon-color);
-                }
-                p {
-                    margin-top: 20px;
-                    @include text-style ($light-font, 16px, normal, 20px, 1px, $icon-color);
-                }     
             }
         }
     }
 }
+// enf of Home Section
+.services-section {
+    padding: 50px 0px;
+    .container {
+        @extend %container;
+        .firstBall {
+            @include set-ball (100px, 100px, $box-color);
+            margin: 100px;
+        }
+        .services-section-wrapper {
+            @include display-flex ($wrap: wrap, $direction: row, $justify: space-around, $align: center);
+            .services-section-text-wrapper {
+                h2, p {
+                    margin-bottom: 30px;
+                }
+                h2 {
+                    @include text-style ($bold-font, 48px, bold, 50px, 1px, $header-color);
+                }
+                p {
+                    @include text-style ($light-font, 16px, normal, 20px, 0px, #000);
+                }
+                button {
+                    @extend .button-basic;
+                    background-color: $secondBall-color;
+                    @include text-style ($main-font, $btn-text-size, normal, 20px, 2px, #000);
+                    @include transition-ease-in-out;
+                    &:hover {
+                        background-color: $services-section-btn-hover;
+                        color: #fff;
+                    }
+                }
+            }
+            .services-section-banner {
+                position: relative;
+                img {
+                    border-radius: 50%;
+                }
+                .responsive {
+                    width: 100%;
+                    max-width: 600px;
+                    height: auto;
+                }
+                .secondBall {
+                    @include set-ball (250px, 250px, $secondBall-color);
+                    position: absolute;
+                    bottom: -90px;
+                    right: -50px;
+                }
+            }
+        } 
+    }
+}
+
