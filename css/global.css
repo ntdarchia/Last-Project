@@ -137,18 +137,120 @@ a {
   font-style: normal;
 }
 
-.home-section .container, .services-section .container {
+.home-section .container, .services-section .container, .section-3 .container, .tours-section .container, .about-us .container {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
 }
 
-.button-basic, .home-section .container .cover-image .cover-text button, .services-section .container .services-section-wrapper .services-section-text-wrapper button {
+.button-basic, .home-section .container .cover-image .cover-text button, .services-section .container .services-section-wrapper .services-section-text-wrapper button, .section-3 .container .section-3-wrapper .text-wrapper .text-div button, .tours-section .container .section-banner .text-wrapper button, .tours-section .container .slider-container .slider-item .body .sub_div button, .tours-section .container .apply-btn-div .apply-btn, .about-us .container .section-banner-wrapper .section-text-wrapper .btn-div button {
   background: none;
   border: none;
-  padding: 20px 40px;
+  padding: 20px 45px;
   text-align: center;
   cursor: pointer;
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
 }
 
 .headerDiv {
@@ -170,8 +272,9 @@ a {
 }
 
 .headerDiv a {
-  font-family: "robotothin_italic", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 25px;
+  font-style: italic;
   font-weight: bold;
   line-height: 20px;
   letter-spacing: 1px;
@@ -207,9 +310,10 @@ a {
 }
 
 .headerDiv .nav-wrapper ul li > a {
-  font-family: "robotolight", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
-  font-weight: normal;
+  font-style: normal;
+  font-weight: 300;
   line-height: 20px;
   letter-spacing: 0px;
   color: #5b99c7;
@@ -241,9 +345,10 @@ a {
   right: 150px;
 }
 
-.home-section .container .cover-image .cover-text .title {
-  font-family: "robotoregular", sans-serif;
+.home-section .container .cover-image .cover-text h1 {
+  font-family: "robotobold", sans-serif;
   font-size: 60px;
+  font-style: normal;
   font-weight: bold;
   letter-spacing: 4px;
   color: #fff;
@@ -295,10 +400,11 @@ a {
 }
 
 .home-section .container .cover-image .cover-text p {
-  font-family: "robotothin_italic", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
-  font-weight: normal;
-  line-height: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
   letter-spacing: 0px;
   color: #fff;
   margin-bottom: 40px;
@@ -306,9 +412,10 @@ a {
 
 .home-section .container .cover-image .cover-text button {
   border: 2px solid #fff;
-  font-family: "robotoregular", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  font-weight: normal;
+  font-style: normal;
+  font-weight: bold;
   line-height: 20px;
   letter-spacing: 2px;
   color: #fff;
@@ -331,20 +438,23 @@ a {
 }
 
 .home-section .container .home-section-text-wrapper h3 {
-  font-family: "robotoregular", sans-serif;
-  font-size: 60px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-family: "robotobold", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 3px;
   color: #000;
 }
 
 .home-section .container .home-section-text-wrapper p {
-  font-family: "robotothin_italic", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  font-weight: normal;
+  font-style: italic;
+  font-weight: 400;
   line-height: 22px;
   letter-spacing: 0px;
-  color: #000;
+  color: #000000;
 }
 
 .home-section .container .home-section-text-wrapper .linkDiv {
@@ -366,9 +476,10 @@ a {
 }
 
 .home-section .container .home-section-text-wrapper .linkDiv h4 {
-  font-family: "robotothin_italic", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  font-weight: normal;
+  font-style: italic;
+  font-weight: 400;
   line-height: 22px;
   letter-spacing: 0px;
   color: #000;
@@ -377,9 +488,10 @@ a {
 
 .home-section .container .home-section-text-wrapper .linkDiv a {
   text-decoration: underline;
-  font-family: "robotolight", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 22px;
   letter-spacing: 0px;
   color: #000;
@@ -428,21 +540,23 @@ a {
   transition: top 5s ease-in-out;
 }
 
-.home-section .container .home-section-box-wrapper .box-1 .box-body h2, .home-section .container .home-section-box-wrapper .box-2 .box-body h2, .home-section .container .home-section-box-wrapper .box-3 .box-body h2, .home-section .container .home-section-box-wrapper .box-4 .box-body h2 {
+.home-section .container .home-section-box-wrapper .box-1 .box-body h5, .home-section .container .home-section-box-wrapper .box-2 .box-body h5, .home-section .container .home-section-box-wrapper .box-3 .box-body h5, .home-section .container .home-section-box-wrapper .box-4 .box-body h5 {
   margin-top: 20px;
   font-family: "robotolight", sans-serif;
   font-size: 20px;
-  font-weight: normal;
-  line-height: 20px;
-  letter-spacing: 3px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: 4px;
   color: #546166;
 }
 
 .home-section .container .home-section-box-wrapper .box-1 .box-body p, .home-section .container .home-section-box-wrapper .box-2 .box-body p, .home-section .container .home-section-box-wrapper .box-3 .box-body p, .home-section .container .home-section-box-wrapper .box-4 .box-body p {
   margin-top: 20px;
-  font-family: "robotolight", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  font-weight: normal;
+  font-style: normal;
+  font-weight: 400;
   line-height: 20px;
   letter-spacing: 1px;
   color: #546166;
@@ -462,7 +576,7 @@ a {
   padding: 50px 0px;
 }
 
-.services-section .container .firstBall {
+.services-section .container .ball-1 {
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -492,28 +606,31 @@ a {
 }
 
 .services-section .container .services-section-wrapper .services-section-text-wrapper h2 {
-  font-family: "robotobold", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 48px;
+  font-style: normal;
   font-weight: bold;
-  line-height: 50px;
-  letter-spacing: 1px;
+  line-height: 55px;
+  letter-spacing: 2px;
   color: #546166;
 }
 
 .services-section .container .services-section-wrapper .services-section-text-wrapper p {
-  font-family: "robotolight", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  font-weight: normal;
-  line-height: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
   letter-spacing: 0px;
-  color: #000;
+  color: #000000;
 }
 
 .services-section .container .services-section-wrapper .services-section-text-wrapper button {
   background-color: #aec5cd;
-  font-family: "robotoregular", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  font-weight: normal;
+  font-style: normal;
+  font-weight: bold;
   line-height: 20px;
   letter-spacing: 2px;
   color: #000;
@@ -532,15 +649,12 @@ a {
 
 .services-section .container .services-section-wrapper .services-section-banner img {
   border-radius: 50%;
+  width: 550px;
+  height: 550px;
+  opacity: 0.9;
 }
 
-.services-section .container .services-section-wrapper .services-section-banner .responsive {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-}
-
-.services-section .container .services-section-wrapper .services-section-banner .secondBall {
+.services-section .container .services-section-wrapper .services-section-banner .ball-2 {
   border-radius: 50%;
   width: 250px;
   height: 250px;
@@ -548,5 +662,505 @@ a {
   position: absolute;
   bottom: -90px;
   right: -50px;
+}
+
+.section-3 {
+  margin-top: 100px;
+  padding: 50px;
+  background-color: #c4d6dc;
+  height: 750px;
+}
+
+.section-3 .container .section-3-wrapper {
+  position: relative;
+  background-color: #fff;
+  width: 80%;
+  margin: 0px auto;
+}
+
+.section-3 .container .section-3-wrapper .text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px;
+}
+
+.section-3 .container .section-3-wrapper .text-wrapper .empty-div, .section-3 .container .section-3-wrapper .text-wrapper .text-div {
+  width: 50%;
+}
+
+.section-3 .container .section-3-wrapper .text-wrapper .text-div h3, .section-3 .container .section-3-wrapper .text-wrapper .text-div p, .section-3 .container .section-3-wrapper .text-wrapper .text-div .section-link {
+  margin-bottom: 30px;
+}
+
+.section-3 .container .section-3-wrapper .text-wrapper .text-div h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 36px;
+  letter-spacing: 3px;
+  color: #546166;
+}
+
+.section-3 .container .section-3-wrapper .text-wrapper .text-div p, .section-3 .container .section-3-wrapper .text-wrapper .text-div h6 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+.section-3 .container .section-3-wrapper .text-wrapper .text-div .section-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-3 .container .section-3-wrapper .text-wrapper .text-div .section-link h6 {
+  margin-right: 10px;
+}
+
+.section-3 .container .section-3-wrapper .text-wrapper .text-div .section-link a {
+  text-decoration: underline;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  color: #000;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.section-3 .container .section-3-wrapper .text-wrapper .text-div .section-link a:hover {
+  text-decoration: none;
+}
+
+.section-3 .container .section-3-wrapper .text-wrapper .text-div button {
+  border: 2px solid #293033;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: #000;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.section-3 .container .section-3-wrapper .text-wrapper .text-div button:hover {
+  background-color: #293033;
+  color: #fff;
+}
+
+.section-3 .container .section-3-wrapper .banner-image {
+  position: absolute;
+}
+
+.section-3 .container .section-3-wrapper .banner-image .image-div {
+  position: relative;
+  bottom: 300px;
+  right: 100px;
+}
+
+.section-3 .container .section-3-wrapper .banner-image .image-div img {
+  border-radius: 50%;
+  width: 550px;
+  height: 550px;
+  -webkit-filter: blur(0.7px);
+          filter: blur(0.7px);
+}
+
+.section-3 .container .section-3-wrapper .banner-image .image-div .overlay-div {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background-color: #dce7ec;
+  position: absolute;
+  bottom: -15px;
+  left: 400px;
+}
+
+.tours-section {
+  padding: 50px;
+  background-color: #f2f2f2;
+}
+
+.tours-section .container .section-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 5%;
+}
+
+.tours-section .container .section-banner .text-wrapper {
+  position: absolute;
+  left: 200px;
+  z-index: 1;
+  width: 35%;
+  padding: 40px;
+  margin-left: -100px;
+  background-color: #fff;
+}
+
+.tours-section .container .section-banner .text-wrapper h4, .tours-section .container .section-banner .text-wrapper p, .tours-section .container .section-banner .text-wrapper button {
+  margin-bottom: 20px;
+}
+
+.tours-section .container .section-banner .text-wrapper h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 36px;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+.tours-section .container .section-banner .text-wrapper p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+.tours-section .container .section-banner .text-wrapper button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: #000;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: #aec5cd;
+}
+
+.tours-section .container .section-banner .text-wrapper button:hover {
+  background-color: #80939a;
+  color: #fff;
+}
+
+.tours-section .container .section-banner .banner-wrapper {
+  position: relative;
+}
+
+.tours-section .container .section-banner .banner-wrapper .white-div {
+  border-radius: 50%;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.tours-section .container .section-banner .banner-wrapper .white-div .image-div img {
+  border-radius: 50%;
+  width: 550px;
+  height: 550px;
+  position: relative;
+  opacity: 0.9;
+}
+
+.tours-section .container .section-banner .banner-wrapper .white-div .image-div .overlay-image {
+  position: absolute;
+  bottom: -20px;
+  left: -90px;
+}
+
+.tours-section .container .section-banner .banner-wrapper .white-div .image-div .overlay-image img {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  opacity: 1;
+}
+
+.tours-section .container .text-div {
+  margin: 150px auto;
+  text-align: center;
+}
+
+.tours-section .container .text-div h2 {
+  margin-bottom: 30px;
+  font-family: "robotobold", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 40px;
+  letter-spacing: 1px;
+  color: #546166;
+}
+
+.tours-section .container .text-div h4 {
+  margin-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #181818;
+}
+
+.tours-section .container .slider-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tours-section .container .slider-container .slider-item {
+  width: 33%;
+  padding: 30px;
+  margin: 10px;
+  background-color: #fff;
+}
+
+.tours-section .container .slider-container .slider-item .head img {
+  margin: 0px auto;
+  width: 300px;
+  height: 240px;
+  opacity: 0.9;
+}
+
+.tours-section .container .slider-container .slider-item .body h5 {
+  margin: 20px 0px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+.tours-section .container .slider-container .slider-item .body p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+.tours-section .container .slider-container .slider-item .body .sub_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tours-section .container .slider-container .slider-item .body .sub_div button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: #000;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: #aec5cd;
+}
+
+.tours-section .container .slider-container .slider-item .body .sub_div button:hover {
+  background-color: #80939a;
+  color: #fff;
+}
+
+.tours-section .container .apply-btn-div {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.tours-section .container .apply-btn-div .apply-btn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: #000;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: #aec5cd;
+}
+
+.tours-section .container .apply-btn-div .apply-btn:hover {
+  opacity: 0.7;
+}
+
+.about-us {
+  padding: 50px;
+}
+
+.about-us .container .section-heading, .about-us .container .section-main-paragraph, .about-us .container h2, .about-us .container p {
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.about-us .container .section-heading {
+  font-family: "robotobold", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 10px;
+  color: #000;
+}
+
+.about-us .container .section-main-paragraph {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+.about-us .container .section-banner-wrapper {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-us .container .section-banner-wrapper .banner-image {
+  position: relative;
+}
+
+.about-us .container .section-banner-wrapper .banner-image img {
+  border-radius: 50%;
+  width: 550px;
+  height: 550px;
+}
+
+.about-us .container .section-banner-wrapper .banner-image .ball-4 {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  background-color: #aec5cd;
+  position: absolute;
+  left: 20px;
+  bottom: -50px;
+}
+
+.about-us .container .section-banner-wrapper .section-text-wrapper h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 55px;
+  letter-spacing: 2px;
+  color: #546166;
+}
+
+.about-us .container .section-banner-wrapper .section-text-wrapper p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+.about-us .container .section-banner-wrapper .section-text-wrapper .btn-div {
+  text-align: right;
+}
+
+.about-us .container .section-banner-wrapper .section-text-wrapper .btn-div button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: #000;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: #aec5cd;
+}
+
+.about-us .container .section-banner-wrapper .section-text-wrapper .btn-div button:hover {
+  background-color: #80939a;
+  color: #fff;
 }
 /*# sourceMappingURL=global.css.map */

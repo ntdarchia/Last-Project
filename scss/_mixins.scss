@@ -8,9 +8,10 @@
 @mixin  transition-ease-in-out {
     transition: all 0.5s ease-in-out;  
 }
-@mixin text-style ($family, $size, $weight, $height, $spacing, $color) {
+@mixin text-style ($family, $size, $style, $weight, $height, $spacing, $color) {
     font-family: $family;
     font-size: $size;
+    font-style: $style;
     font-weight: $weight;
     line-height: $height;
     letter-spacing: $spacing;
@@ -26,4 +27,14 @@
     width: $width;
     height: $height;
     background-color: $color;
+}
+@mixin set-rounded-image ($width: 550px, $height: 550px) {
+    border-radius: 50%;
+    width: $width;
+    height: $height;
+}
+@mixin set-slider-image ($width: 300px, $height :240px, $opacity: 0.9) {
+    width: $width;
+    height: $height;
+    opacity: $opacity;
 }

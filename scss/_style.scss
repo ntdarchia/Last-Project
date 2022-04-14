@@ -2,7 +2,7 @@
     @include display-flex (wrap, row, space-around, center);
     margin-top: 30px;
     a {
-        @include text-style ($italic-font, 25px, bold, 20px, 1px, $logo-color);
+        @include text-style ($main-font, 25px, italic, bold, 20px, 1px, $logo-color);
         @include transition-ease-in-out;
         &:hover {
             color: $hover-color;
@@ -14,7 +14,7 @@
            li {
                margin-right: 30px;
                & > a {
-                   @include text-style ($light-font, 18px, normal, 20px, 0px, $nav-color);
+                   @include text-style ($main-font, $link-size, normal, 300, 20px, 0px, $nav-color);
                    @include transition-ease-in-out;
                    &:hover {
                        color: $hover-color;
@@ -40,8 +40,8 @@
             position: absolute;
             top: 400px;
             right: 150px;
-            .title {
-                @include text-style ($main-font, 60px, bold, null, 4px, #fff);
+            h1 {
+                @include text-style ($roboto-bold, 60px, normal, bold, null, 4px, #fff);
                 margin-bottom: 40px;
                 width: 0;
                 overflow: hidden;
@@ -63,13 +63,13 @@
                 to { border-color: #fff }
                 }
             p {
-                @include text-style ($italic-font, 18px, normal, 20px, 0px, #fff);
+                @include text-style ($main-font, 18px, normal, 400, 25px, 0px, #fff);
                 margin-bottom: 40px;
             }
             button {
                 @extend .button-basic;
                 border: 2px solid #fff;
-                @include text-style ($main-font, $btn-text-size, normal, 20px, 2px, #fff);
+                @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, #fff);
                 @include transition-ease-in-out;
                     &:hover {
                         background-color: #fff;
@@ -85,20 +85,20 @@
                 margin-bottom: 30px;
             }
             h3 {
-                @include text-style ($main-font, 60px, bold, null, 1px, #000);
+                @include text-style ($roboto-bold, 50px, normal, 500, 30px, 3px, $heading-color-02);
             }
             p {
-                @include text-style ($italic-font, $paragraph-size, normal, 22px, 0px, #000);
+                @include text-style ($main-font, $paragraph-size, italic, 400, 22px, 0px, $paragraph-color);
             }
             .linkDiv {
                 @include display-flex (nowrap, row, center, center);
                 h4 {
-                    @include text-style ($italic-font, 16px, normal, 22px, 0px, #000);
+                    @include text-style ($main-font, 16px, italic, 400, 22px, 0px, $heading-color-02);
                     margin-right: 10px;
                 }
                 a {
                     text-decoration: underline;
-                    @include text-style ($light-font, 16px, normal, 22px, 0px, #000);
+                    @include text-style ($main-font, $link-size, normal, 400, 22px, 0px, #000);
                     @include transition-ease-in-out;
                 &:hover {
                     text-decoration: none;
@@ -125,19 +125,19 @@
                     }  
                 }
                 .box-body {
-                    h2 {
+                    h5 {
                         margin-top: 20px;
-                        @include text-style ($light-font, 20px, normal, 20px, 3px, $icon-color);
+                        @include text-style ($roboto-light, $heding-5-size, normal, 300, 25px, 4px, $icon-color);
                     }
                     p {
                         margin-top: 20px;
-                        @include text-style ($light-font, $paragraph-size, normal, 20px, 1px, $icon-color);
+                        @include text-style ($main-font, $paragraph-size, normal, 400, 20px, 1px, $icon-color);
                     }     
                 }
             }
             .box-1:hover, .box-2:hover, .box-3:hover, .box-4:hover {
                 h2, p {
-                    color: #000;
+                    color: $heading-color-02;
                 }
                 svg {
                     position: relative;
@@ -149,12 +149,12 @@
         }
     }
 }
-// enf of Home Section
+// end of Home Section
 .services-section {
     padding: 50px 0px;
     .container {
         @extend %container;
-        .firstBall {
+        .ball-1 {
             @include set-ball (100px, 100px, $box-color);
             margin: 100px;
         }
@@ -165,15 +165,15 @@
                     margin-bottom: 30px;
                 }
                 h2 {
-                    @include text-style ($bold-font, 48px, bold, 50px, 1px, $header-color);
+                    @include text-style ($montserrat-font, $heading-2-size, normal, bold, 55px, 2px, $heading-color-01);
                 }
                 p {
-                    @include text-style ($light-font, 16px, normal, 20px, 0px, #000);
+                    @include text-style ($main-font, $paragraph-size, normal, 400, 30px, 0px, $paragraph-color);
                 }
                 button {
                     @extend .button-basic;
-                    background-color: $secondBall-color;
-                    @include text-style ($main-font, $btn-text-size, normal, 20px, 2px, #000);
+                    background-color: $ball-2-color;
+                    @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, #000);
                     @include transition-ease-in-out;
                     &:hover {
                         background-color: $services-section-btn-hover;
@@ -184,15 +184,11 @@
             .services-section-banner {
                 position: relative;
                 img {
-                    border-radius: 50%;
+                    @include set-rounded-image;
+                    opacity: 0.9;
                 }
-                .responsive {
-                    width: 100%;
-                    max-width: 600px;
-                    height: auto;
-                }
-                .secondBall {
-                    @include set-ball (250px, 250px, $secondBall-color);
+                .ball-2 {
+                    @include set-ball (250px, 250px, $ball-2-color);
                     position: absolute;
                     bottom: -90px;
                     right: -50px;
@@ -201,4 +197,262 @@
         } 
     }
 }
+.section-3 {
+    margin-top: 100px;
+    padding: 50px;
+    background-color: $section-3-bg;
+    height: 750px;
+    .container {
+        @extend %container;
+        .section-3-wrapper {
+            position: relative;
+            background-color: #fff;
+            width: 80%;
+            margin: 0px auto;
+            .text-wrapper {
+                @include display-flex (wrap, row, end, center);
+                padding: 50px;
+                .empty-div, .text-div {
+                    width: 50%;
+                }
+                .text-div {
+                    h3, p, .section-link {
+                        margin-bottom: 30px;
+                    }
+                    h3 {
+                        @include text-style ($montserrat-font, $heading-3-size, normal, bold, 36px, 3px, $heading-color-01);
+                    }
+                    p, h6 {
+                        @include text-style ($main-font, $paragraph-size, normal, 400, 25px, 0px, $paragraph-color);
+                    }
+                    .section-link {
+                        @include display-flex (nowrap, row, start, center);
+                        h6 {
+                                margin-right: 10px;
+                        }
+                        a {
+                            text-decoration: underline;
+                            @include text-style ($main-font, $link-size, normal, 400, 22px, 0px, #000);
+                            @include transition-ease-in-out;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                        }
+                    }
+                    button {
+                        @extend .button-basic;
+                        border: 2px solid $section-3-btn-hover;
+                        @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, #000);
+                        @include transition-ease-in-out;
+                        &:hover {
+                            background-color: $section-3-btn-hover;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .banner-image {
+                position: absolute;
+                .image-div {
+                    position: relative;
+                    bottom: 300px;
+                    right: 100px;
+                    img {
+                        @include set-rounded-image;
+                        filter: blur(0.7px);
+                    }
+                    .overlay-div {
+                        @include set-ball (150px, 150px, $ball-3-color); 
+                        position: absolute;
+                        bottom: -15px;
+                        left: 400px;
+                        }
+                    }
+                }  
+            }
+    }
+}
+// Start Tours Section
+.tours-section {
+    padding: 50px;
+    background-color: $tours-section-bg;
+    .container {
+        @extend %container;
+        .section-banner {
+            @include display-flex (wrap, row, end, center);
+            margin-right: 5%;
+            .text-wrapper {
+                position: absolute;
+                left: 200px;
+                z-index: 1;
+                width: 35%;
+                padding: 40px;
+                margin-left: -100px;
+                background-color: #fff;
+                h4, p, button {
+                    margin-bottom: 20px;
+                }
+                h4 {
+                    @include text-style ($montserrat-font, $heading-4-size, normal, bold, 36px, 1px, $heading-color-02);
+                }
+                p {
+                    @include text-style ($main-font, $paragraph-size, normal, 400, 25px, 0px, $paragraph-color);
+                }
+                button {
+                    @extend .button-basic;
+                    @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, #000);
+                    @include transition-ease-in-out;
+                    background-color: $tours-section-btn;
+                    &:hover {
+                        background-color: $tours-section-btn-hover;
+                        color: #fff;
+                    }
+                }
+            }
+            .banner-wrapper {
+                position: relative;
+                .white-div {
+                    border-radius: 50%;
+                    padding: 20px;
+                    background-color: #fff;
+                    .image-div {
+                        img {
+                            @include set-rounded-image;
+                            position: relative;
+                            opacity: 0.9;
+                        }
+                        .overlay-image {
+                            position: absolute;
+                            bottom: -20px;
+                            left: -90px;
+                            img {
+                                @include set-rounded-image (300px, 300px);
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .text-div {
+            margin: 150px auto;
+            text-align: center;
+            h2 {
+                margin-bottom: 30px;
+                @include text-style ($roboto-bold, $heading-2-size, normal, bold, 40px, 1px, $heading-color-01);
+            }
+            h4 {
+                margin-bottom: 20px;
+                @include text-style ($main-font, $heading-4-size, normal, 300, 30px, 0px, $heading-color-03);
+            }
+        }
+        // slider section
+        .slider-container {
+            @include display-flex;
+             .slider-item {
+                width: 33%;
+                padding: 30px;
+                margin:10px;
+                background-color: #fff;
+                .head {
+                    img {
+                        margin: 0px auto;
+                        @include set-slider-image;
+                    }
+                }
+                .body {
+                    h5 {
+                        margin: 20px 0px;
+                        @include text-style ($main-font, $heding-5-size, normal, bold, 20px, 1px, #000);
+                    }
+                    p {
+                        @include text-style ($main-font, $paragraph-size, normal, 400, 25px, 0px, $paragraph-color);
+                    }
+                    .sub_div {
+                        @include display-flex;
+                        button {
+                            @extend .button-basic;
+                            @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, #000);
+                            @include transition-ease-in-out;
+                            background-color: $tours-section-btn;
+                            &:hover {
+                                background-color: $tours-section-btn-hover;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .apply-btn-div {
+            text-align: center;
+            margin-top: 80px;
+            .apply-btn {
+                @extend .button-basic;
+                @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, #000);
+                @include transition-ease-in-out;
+                background-color: $apply-btn;
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+// Start About Us Section
+.about-us {
+    padding: 50px;
+    .container {
+        @extend %container;
+        .section-heading, .section-main-paragraph, h2, p {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+        .section-heading {
+            @include text-style ($roboto-bold, 24px, normal, bold, 24px, 10px, #000);
+        }
+        .section-main-paragraph {
+            @include text-style ($main-font, $paragraph-size, normal, 400, 24px, 0px, $paragraph-color);
+        }
+        .section-banner-wrapper {
+            margin-top: 100px;
+            @include display-flex (wrap, row, space-around, $align: center);
+            .banner-image {
+                position: relative;
+                img {
+                    @include set-rounded-image;
+                }
+                .ball-4 {
+                    @include set-ball (180px, 180px, $ball-2-color); 
+                    position: absolute;
+                    left: 20px;
+                    bottom: -50px;
+                }
+            }
+            .section-text-wrapper {
+                h2 {
+                    @include text-style ($montserrat-font, $heading-2-size, normal, bold, 55px, 2px, $heading-color-01);
+                }
+                p {
+                    @include text-style ($main-font, $paragraph-size, normal, 400, 30px, 0px, $paragraph-color);
+                }
+                .btn-div {
+                    text-align: right;
+                    button {
+                        @extend .button-basic;
+                        @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, #000);
+                        @include transition-ease-in-out;
+                        background-color: $ball-2-color;
+                        &:hover {
+                            background-color: $services-section-btn-hover;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Start Contact Us Section
+
 
