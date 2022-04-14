@@ -137,7 +137,7 @@ a {
   font-style: normal;
 }
 
-.home-section .container, .services-section .container, .section-3 .container, .tours-section .container, .about-us .container {
+.home-section .container, .services-section .container, .section-3 .container, .tours-section .container, .about-us .container, .contactUs-section .container {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
@@ -1161,6 +1161,62 @@ a {
 
 .about-us .container .section-banner-wrapper .section-text-wrapper .btn-div button:hover {
   background-color: #80939a;
+  color: #fff;
+}
+
+.contactUs-section {
+  margin-top: 100px;
+}
+
+.contactUs-section .container .section-banner-image {
+  background-image: url("../images/s-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 850px;
+  padding: 50px;
+}
+
+.contactUs-section .container .section-banner-image .section-overlay-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  width: 90%;
+  margin: 0px auto;
+  z-index: 2;
+}
+
+.contactUs-section .container .section-banner-image .section-overlay-div .p-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  background-color: #c4d6dc;
+  padding: 20px;
+}
+
+.contactUs-section .container .section-banner-image .section-overlay-div .p-div p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 30px;
+  letter-spacing: 0px;
   color: #fff;
 }
 /*# sourceMappingURL=global.css.map */

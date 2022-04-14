@@ -454,5 +454,39 @@
     }
 }
 // Start Contact Us Section
+.contactUs-section {
+    margin-top: 100px;
+    .container {
+        @extend %container;
+        .section-banner-image {
+            background-image: url("../images/s-2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 850px; 
+            padding: 50px;
+            .section-overlay-div {
+                @include display-flex;
+                padding: 30px;
+                width: 90%;
+                margin: 0px auto;
+                z-index: 2;
+
+                .p-div {
+                    display: flex;
+                    align-items: center;
+                    width: 30%;
+                    background-color: $section-3-bg;
+                    padding: 20px;
+                    p {
+                        @include text-style ($main-font, $paragraph-size, normal, bold, 30px, 0px, #fff);
+                    }
+                }
+
+
+            }
+        }
+    }
+
+}
 
 
