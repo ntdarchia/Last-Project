@@ -1,5 +1,41 @@
+
+
+.hamburger {
+    display: block;
+    width: 40px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    margin: 30px;
+    & > .bar, &::before, &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #000;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+    &.is-active::before {
+        transform: rotate(-45deg) translate(-8px, 4px);
+    }
+    &.is-active .bar {
+        opacity: 0;
+    }
+    &.is-active::after {
+        transform: rotate(45deg) translate(-8px, -4px);
+    }
+}
+
+
+
+  
+
+// end of new one
 .headerDiv {
-    @include display-flex (wrap, row, space-around, center);
+    @include display-flex (row, space-around, center);
     margin-top: 30px;
     a {
         @include text-style ($main-font, 25px, italic, bold, 20px, 1px, $logo-color);
@@ -91,14 +127,16 @@
                 @include text-style ($main-font, $paragraph-size, italic, 400, 22px, 0px, $paragraph-color);
             }
             .linkDiv {
-                @include display-flex (nowrap, row, center, center);
+                // @include display-flex (nowrap, row, center, center);
+                @include display-flex (row, center, center);
+
                 h4 {
                     @include text-style ($main-font, 16px, italic, 400, 22px, 0px, $heading-color-02);
                     margin-right: 10px;
                 }
                 a {
                     text-decoration: underline;
-                    @include text-style ($main-font, $link-size, normal, 400, 22px, 0px, #000);
+                    @include text-style ($main-font, $link-size, normal, 400, 22px, 0px, $black-color);
                     @include transition-ease-in-out;
                 &:hover {
                     text-decoration: none;
@@ -110,7 +148,7 @@
             width: 90%;
             height: auto;
             margin: 0px auto;
-            @include display-flex (wrap, row, space-around, center); 
+            @include display-flex (row, space-around, center); 
             .box-1, .box-2, .box-3, .box-4 {
                 @include set-box (23%, 250px);
                 text-align: center;
@@ -146,6 +184,18 @@
                     
                 }
             }
+            @media (max-width: $container-size-lg) {
+                .box-1, .box-2, .box-3, .box-4 {
+                    @include set-box (48%, 250px);
+                    margin-bottom: 15px;
+                }
+            }
+            @media (max-width: $container-size-medium) {
+                .box-1, .box-2, .box-3, .box-4 {
+                    @include set-box (70%, 250px);
+                    margin-bottom: 20px;
+                }
+            }
         }
     }
 }
@@ -159,7 +209,7 @@
             margin: 100px;
         }
         .services-section-wrapper {
-            @include display-flex ($wrap: wrap, $direction: row, $justify: space-around, $align: center);
+            @include display-flex ($direction: row, $justify: space-around, $align: center);
             .services-section-text-wrapper {
                 h2, p {
                     margin-bottom: 30px;
@@ -173,7 +223,7 @@
                 button {
                     @extend .button-basic;
                     background-color: $ball-2-color;
-                    @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, #000);
+                    @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, $black-color);
                     @include transition-ease-in-out;
                     &:hover {
                         background-color: $services-section-btn-hover;
@@ -210,7 +260,7 @@
             width: 80%;
             margin: 0px auto;
             .text-wrapper {
-                @include display-flex (wrap, row, end, center);
+                @include display-flex (row, end, center);
                 padding: 50px;
                 .empty-div, .text-div {
                     width: 50%;
@@ -226,13 +276,15 @@
                         @include text-style ($main-font, $paragraph-size, normal, 400, 25px, 0px, $paragraph-color);
                     }
                     .section-link {
-                        @include display-flex (nowrap, row, start, center);
+                        @include display-flex (row, start, center);
+                        // @include display-flex (nowrap, row, start, center);
+
                         h6 {
                                 margin-right: 10px;
                         }
                         a {
                             text-decoration: underline;
-                            @include text-style ($main-font, $link-size, normal, 400, 22px, 0px, #000);
+                            @include text-style ($main-font, $link-size, normal, 400, 22px, 0px, $black-color);
                             @include transition-ease-in-out;
                         &:hover {
                             text-decoration: none;
@@ -242,7 +294,7 @@
                     button {
                         @extend .button-basic;
                         border: 2px solid $section-3-btn-hover;
-                        @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, #000);
+                        @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, $black-color);
                         @include transition-ease-in-out;
                         &:hover {
                             background-color: $section-3-btn-hover;
@@ -279,7 +331,7 @@
     .container {
         @extend %container;
         .section-banner {
-            @include display-flex (wrap, row, end, center);
+            @include display-flex (row, end, center);
             margin-right: 5%;
             .text-wrapper {
                 position: absolute;
@@ -300,7 +352,7 @@
                 }
                 button {
                     @extend .button-basic;
-                    @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, #000);
+                    @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, $black-color);
                     @include transition-ease-in-out;
                     background-color: $tours-section-btn;
                     &:hover {
@@ -363,7 +415,7 @@
                 .body {
                     h5 {
                         margin: 20px 0px;
-                        @include text-style ($main-font, $heding-5-size, normal, bold, 20px, 1px, #000);
+                        @include text-style ($main-font, $heding-5-size, normal, bold, 20px, 1px, $black-color);
                     }
                     p {
                         @include text-style ($main-font, $paragraph-size, normal, 400, 25px, 0px, $paragraph-color);
@@ -372,7 +424,7 @@
                         @include display-flex;
                         button {
                             @extend .button-basic;
-                            @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, #000);
+                            @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, $black-color);
                             @include transition-ease-in-out;
                             background-color: $tours-section-btn;
                             &:hover {
@@ -396,7 +448,7 @@
             margin-top: 80px;
             .apply-btn {
                 @extend .button-basic;
-                @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, #000);
+                @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, $black-color);
                 @include transition-ease-in-out;
                 background-color: $apply-btn;
                 &:hover {
@@ -416,14 +468,14 @@
             margin-bottom: 30px;
         }
         .section-heading {
-            @include text-style ($roboto-bold, 24px, normal, bold, 24px, 10px, #000);
+            @include text-style ($roboto-bold, 24px, normal, bold, 24px, 10px, $black-color);
         }
         .section-main-paragraph {
             @include text-style ($main-font, $paragraph-size, normal, 400, 24px, 0px, $paragraph-color);
         }
         .section-banner-wrapper {
             margin-top: 100px;
-            @include display-flex (wrap, row, space-around, $align: center);
+            @include display-flex (row, space-around, $align: center);
             .banner-image {
                 position: relative;
                 img {
@@ -447,7 +499,7 @@
                     text-align: right;
                     button {
                         @extend .button-basic;
-                        @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, #000);
+                        @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, $black-color);
                         @include transition-ease-in-out;
                         background-color: $ball-2-color;
                         &:hover {
@@ -469,7 +521,6 @@
             background-image: url("../images/s-2.jpg");
             background-repeat: no-repeat;
             background-size: cover;
-            height: 850px; 
             padding: 50px;
             .section-overlay-div {
                 @include display-flex;
@@ -496,7 +547,7 @@
                     }
                     label {
                         margin-bottom: 10px;
-                        @include text-style ($main-font, $paragraph-size, normal, bold, 30px, 0px, #000);
+                        @include text-style ($main-font, $paragraph-size, normal, bold, 30px, 0px, $black-color);
                     }
                     input, select, textarea {
                         padding: 12px;
@@ -512,13 +563,16 @@
                             opacity: 1;
                         }
                     }
-                    .date-tel-div {
-                        @include display-flex ($wrap: wrap, $direction: row, $justify: space-between, $align: end);
-                        width: 100%;
-                        .date-div, .phone-div {
-                            width: 48%;
-                        }
+                    @media (min-width: $container-size-medium) {
+                        .date-tel-div {
+                            @include display-flex (row, space-between, end);
+                            width: 100%;
+                            .date-div, .phone-div {
+                                width: 48%;
+                            }
+                        }  
                     }
+                    
                     textarea {
                         resize: none;
                         height: 100px;
@@ -528,7 +582,7 @@
                         }
                     }
                     input[type=submit] {
-                        @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, #000); 
+                        @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, $black-color); 
                         text-transform: uppercase;                       
                         background-color: $section-3-bg;
                         border: none;
@@ -539,6 +593,17 @@
                             color: #fff;
                         }
                     }
+                }
+                @media (max-width: $container-size-lg) {
+                    .date-tel-div {
+                        flex-direction: column;
+                    }
+                    .p-div, .form-wrapper, input, select, textarea, .date-div, .phone-div {
+                        width: 100%;
+                    }
+                    .p-div {
+                        height: auto;
+                    } 
                 }
             }
         }
@@ -567,8 +632,12 @@ footer {
             height: 2px;
             background-color: $footer-line-color;
         }
+        @media (min-width: $container-size-medium) {
+            .footer-text-wrapper {
+                @include display-flex (row, space-around, start);
+            }
+        }
         .footer-text-wrapper {
-            @include display-flex ($wrap: wrap, $direction: row, $justify: space-around, $align: start);
             h6 {
                 @include text-style ($main-font, $heading-6-size, normal, 400, 20px, 0px, #fff);
             }
@@ -578,6 +647,18 @@ footer {
             text-align: center;
             @include text-style ($main-font, 14px, normal, 400, 30px, 0px, #fff);
 
+        }
+    }
+    @media (max-width: $container-size-medium) {
+        .footer-text-wrapper {
+            @include display-flex (column, center, center);
+            h6 {
+                text-align: center;
+            }
+
+            & h6:not(:last-child) {
+                margin-bottom: 20px;
+            } 
         }
     }
 }

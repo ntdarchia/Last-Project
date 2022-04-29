@@ -253,6 +253,44 @@ a {
   display: none;
 }
 
+.hamburger {
+  display: block;
+  width: 40px;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  margin: 30px;
+}
+
+.hamburger > .bar, .hamburger::before, .hamburger::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  margin: 4px 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.hamburger.is-active::before {
+  -webkit-transform: rotate(-45deg) translate(-8px, 4px);
+          transform: rotate(-45deg) translate(-8px, 4px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.hamburger.is-active::after {
+  -webkit-transform: rotate(45deg) translate(-8px, -4px);
+          transform: rotate(45deg) translate(-8px, -4px);
+}
+
 .headerDiv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -461,8 +499,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -494,7 +532,7 @@ a {
   font-weight: 400;
   line-height: 22px;
   letter-spacing: 0px;
-  color: #000;
+  color: rgb 0, 0, 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -572,6 +610,24 @@ a {
   fill: #707c81;
 }
 
+@media (max-width: 992px) {
+  .home-section .container .home-section-box-wrapper .box-1, .home-section .container .home-section-box-wrapper .box-2, .home-section .container .home-section-box-wrapper .box-3, .home-section .container .home-section-box-wrapper .box-4 {
+    max-width: 48%;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-section .container .home-section-box-wrapper .box-1, .home-section .container .home-section-box-wrapper .box-2, .home-section .container .home-section-box-wrapper .box-3, .home-section .container .home-section-box-wrapper .box-4 {
+    max-width: 70%;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+}
+
 .services-section {
   padding: 50px 0px;
 }
@@ -633,7 +689,7 @@ a {
   font-weight: bold;
   line-height: 20px;
   letter-spacing: 2px;
-  color: #000;
+  color: rgb 0, 0, 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -729,8 +785,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -755,7 +811,7 @@ a {
   font-weight: 400;
   line-height: 22px;
   letter-spacing: 0px;
-  color: #000;
+  color: rgb 0, 0, 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -772,7 +828,7 @@ a {
   font-weight: bold;
   line-height: 20px;
   letter-spacing: 2px;
-  color: #000;
+  color: rgb 0, 0, 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -875,7 +931,7 @@ a {
   font-weight: bold;
   line-height: 20px;
   letter-spacing: 2px;
-  color: #000;
+  color: rgb 0, 0, 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   background-color: #aec5cd;
@@ -971,9 +1027,11 @@ a {
 
 .tours-section .container .slider-container .slider-item .head img {
   margin: 0px auto;
-  width: 300px;
+  width: 100%;
   height: 240px;
   opacity: 0.9;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .tours-section .container .slider-container .slider-item .body h5 {
@@ -984,7 +1042,7 @@ a {
   font-weight: bold;
   line-height: 20px;
   letter-spacing: 1px;
-  color: #000;
+  color: rgb 0, 0, 0;
 }
 
 .tours-section .container .slider-container .slider-item .body p {
@@ -1022,7 +1080,7 @@ a {
   font-weight: bold;
   line-height: 20px;
   letter-spacing: 2px;
-  color: #000;
+  color: rgb 0, 0, 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   background-color: #aec5cd;
@@ -1055,7 +1113,7 @@ a {
   font-weight: bold;
   line-height: 20px;
   letter-spacing: 2px;
-  color: #000;
+  color: rgb 0, 0, 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   background-color: #aec5cd;
@@ -1081,7 +1139,7 @@ a {
   font-weight: bold;
   line-height: 24px;
   letter-spacing: 10px;
-  color: #000;
+  color: rgb 0, 0, 0;
 }
 
 .about-us .container .section-main-paragraph {
@@ -1163,7 +1221,7 @@ a {
   font-weight: bold;
   line-height: 20px;
   letter-spacing: 2px;
-  color: #000;
+  color: rgb 0, 0, 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   background-color: #aec5cd;
@@ -1182,7 +1240,6 @@ a {
   background-image: url("../images/s-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 850px;
   padding: 50px;
 }
 
@@ -1248,7 +1305,7 @@ a {
   font-weight: bold;
   line-height: 30px;
   letter-spacing: 0px;
-  color: #000;
+  color: rgb 0, 0, 0;
 }
 
 .contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper input, .contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper select, .contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper textarea {
@@ -1307,27 +1364,28 @@ a {
   opacity: 1;
 }
 
-.contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper .date-tel-div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
-  width: 100%;
-}
-
-.contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper .date-tel-div .date-div, .contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper .date-tel-div .phone-div {
-  width: 48%;
+@media (min-width: 768px) {
+  .contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper .date-tel-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    width: 100%;
+  }
+  .contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper .date-tel-div .date-div, .contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper .date-tel-div .phone-div {
+    width: 48%;
+  }
 }
 
 .contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper textarea {
@@ -1386,7 +1444,7 @@ a {
   font-weight: bold;
   line-height: 20px;
   letter-spacing: 2px;
-  color: #000;
+  color: rgb 0, 0, 0;
   text-transform: uppercase;
   background-color: #c4d6dc;
   border: none;
@@ -1397,6 +1455,21 @@ a {
 .contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper input[type=submit]:hover {
   background-color: #293033;
   color: #fff;
+}
+
+@media (max-width: 992px) {
+  .contactUs-section .container .section-banner-image .section-overlay-div .date-tel-div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactUs-section .container .section-banner-image .section-overlay-div .p-div, .contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper, .contactUs-section .container .section-banner-image .section-overlay-div input, .contactUs-section .container .section-banner-image .section-overlay-div select, .contactUs-section .container .section-banner-image .section-overlay-div textarea, .contactUs-section .container .section-banner-image .section-overlay-div .date-div, .contactUs-section .container .section-banner-image .section-overlay-div .phone-div {
+    width: 100%;
+  }
+  .contactUs-section .container .section-banner-image .section-overlay-div .p-div {
+    height: auto;
+  }
 }
 
 footer {
@@ -1424,21 +1497,23 @@ footer .container .footer-line {
   background-color: #6e6e6e;
 }
 
-footer .container .footer-text-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+@media (min-width: 768px) {
+  footer .container .footer-text-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
 }
 
 footer .container .footer-text-wrapper h6 {
@@ -1461,5 +1536,31 @@ footer .container .rights-reserved-div {
   line-height: 30px;
   letter-spacing: 0px;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  footer .footer-text-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .footer-text-wrapper h6 {
+    text-align: center;
+  }
+  footer .footer-text-wrapper h6:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 /*# sourceMappingURL=global.css.map */
