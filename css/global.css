@@ -149,7 +149,7 @@ a {
   }
 }
 
-.button-basic, .home-section .container .cover-image .cover-text button, .services-section .container .services-section-wrapper .services-section-text-wrapper button, .section-3 .container .section-3-wrapper .text-wrapper .text-div button, .tours-section .container .section-banner .text-wrapper button, .tours-section .container .slider-container .slider-item .body .sub_div button, .tours-section .container .apply-btn-div .apply-btn, .about-us .container .section-banner-wrapper .section-text-wrapper .btn-div button {
+.button-basic, .cover-section .cover-wrapper .cover-text button, .services-section .container .services-section-wrapper .services-section-text-wrapper button, .section-3 .container .section-3-wrapper .text-wrapper .text-div button, .tours-section .container .section-banner .text-wrapper button, .tours-section .container .slider-container .slider-item .body .sub_div button, .tours-section .container .apply-btn-div .apply-btn, .about-us .container .section-banner-wrapper .section-text-wrapper .btn-div button {
   background: none;
   border: none;
   padding: 20px 45px;
@@ -369,34 +369,22 @@ a {
   color: #df535d;
 }
 
-.home-section {
-  margin-top: 30px;
+.cover-section {
+  margin-bottom: 80px;
 }
 
-.home-section .container .cover-image {
+.cover-section .cover-wrapper {
   position: relative;
-  margin-bottom: 50px;
 }
 
-.home-section .container .cover-image img {
+.cover-section .cover-wrapper img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.home-section .container .cover-image .cover-text {
-  position: absolute;
-  top: 400px;
-  right: 150px;
-}
-
-.home-section .container .cover-image .cover-text h1 {
-  font-family: "robotobold", sans-serif;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: bold;
-  letter-spacing: 4px;
-  color: #fff;
-  margin-bottom: 40px;
+.cover-section .cover-wrapper .cover-text h1 {
   width: 0;
   overflow: hidden;
   border-right: 3px solid #fff;
@@ -443,18 +431,7 @@ a {
   }
 }
 
-.home-section .container .cover-image .cover-text p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25px;
-  letter-spacing: 0px;
-  color: #fff;
-  margin-bottom: 40px;
-}
-
-.home-section .container .cover-image .cover-text button {
+.cover-section .cover-wrapper .cover-text button {
   border: 2px solid #fff;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -467,9 +444,94 @@ a {
   transition: all 0.5s ease-in-out;
 }
 
-.home-section .container .cover-image .cover-text button:hover {
+.cover-section .cover-wrapper .cover-text button:hover {
   background-color: #fff;
   color: black;
+}
+
+@media (min-width: 850px) {
+  .cover-section .cover-text {
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+  }
+  .cover-section .cover-text h1 {
+    font-family: "robotobold", sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+  .cover-section .cover-text p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 850px) {
+  .cover-section .cover-text {
+    position: absolute;
+    bottom: 80px;
+    left: 20px;
+  }
+  .cover-section .cover-text h1 {
+    font-family: "robotobold", sans-serif;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  .cover-section .cover-text p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cover-section .cover-text {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+  }
+  .cover-section .cover-text h1 {
+    font-family: "robotobold", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .cover-section .cover-text p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+}
+
+.home-section {
+  margin-top: 30px;
 }
 
 .home-section .container .home-section-text-wrapper {

@@ -61,32 +61,28 @@
     }
 }
 // end Header Section
-.home-section {
-    margin-top: 30px;
-    .container {
-        @extend %container;
-        .cover-image {
-            position: relative;
-            margin-bottom: 50px;
-            img {
-                width: 100%;
-                height: 100%;
-            }
+.cover-section {
+    margin-bottom: 80px;
+    .cover-wrapper {
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .cover-text {
-            position: absolute;
-            top: 400px;
-            right: 150px;
+            // position: absolute;
+            // bottom: 80px;
+            // right: 80px;
             h1 {
-                @include text-style ($roboto-bold, 60px, normal, bold, null, 4px, #fff);
-                margin-bottom: 40px;
                 width: 0;
                 overflow: hidden;
                 border-right: 3px solid #fff;
                 white-space: nowrap;
                 animation: typewriter 4.5s steps(40, end), blinking-cursor 0.8s infinite;
-                animation-iteration-count: infinite;        
+                animation-iteration-count: infinite;       
             }
-                @keyframes typewriter {
+            @keyframes typewriter {
                 from {
                     width: 0
                     }
@@ -94,14 +90,14 @@
                     width: 100%
                     }
             }
-                @keyframes blinking-cursor {
-                from { border-color: transparent }
-                to { border-color: #fff }
-                }
-            p {
-                @include text-style ($main-font, 18px, normal, 400, 25px, 0px, #fff);
-                margin-bottom: 40px;
+            @keyframes blinking-cursor {
+            from { border-color: transparent }
+            to { border-color: #fff }
             }
+            // p {
+            //     @include text-style ($main-font, 18px, normal, 400, 25px, 0px, #fff);
+            //     margin-bottom: 40px;
+            // }
             button {
                 @extend .button-basic;
                 border: 2px solid #fff;
@@ -112,8 +108,58 @@
                         color: black;
                     }
                 }
+        }
+    }
+    @media (min-width: 850px) {
+        .cover-text {
+            position: absolute;
+            bottom: 80px;
+            right: 80px;
+            h1 {
+                @include text-style ($roboto-bold, 60px, normal, bold, null, 4px, #fff);
+                margin-bottom: 40px;
+            }
+            p {
+                @include text-style ($main-font, 18px, normal, 400, 25px, 0px, #fff);
+                margin-bottom: 40px;
             }
         }
+    }
+    @media (max-width: 850px) {
+        .cover-text {
+            position: absolute;
+            bottom: 80px;
+            left: 20px;
+            h1 {
+                @include text-style ($roboto-bold, 54px, normal, bold, null, 4px, #fff);
+                margin-bottom: 30px;
+            }
+            p {
+                @include text-style ($main-font, $paragraph-size, normal, 400, 25px, 0px, #fff);
+                margin-bottom: 30px;
+            }
+        }
+    }
+    @media (max-width: $container-size-medium) {
+        .cover-text {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            h1 {
+                @include text-style ($roboto-bold, 36px, normal, bold, null, 4px, #fff);
+                margin-bottom: 10px;
+            }
+            p {
+                @include text-style ($main-font, $paragraph-size-02, normal, 400, 1.5, 0px, #fff);
+                margin-bottom: 10px; 
+            }
+        }
+    } 
+}
+.home-section {
+    margin-top: 30px;
+    .container {
+        @extend %container;
         .home-section-text-wrapper {
             margin-bottom: 50px;
             h3, p {
@@ -127,7 +173,6 @@
                 @include text-style ($main-font, $paragraph-size, italic, 400, 22px, 0px, $paragraph-color);
             }
             .linkDiv {
-                // @include display-flex (nowrap, row, center, center);
                 @include display-flex (row, center, center);
 
                 h4 {
@@ -180,11 +225,10 @@
                 svg {
                     position: relative;
                     top: -4px;
-                    fill: $icon-hover;
-                    
+                    fill: $icon-hover; 
                 }
             }
-            @media (max-width: $container-size-lg) {
+            @media (max-width: $container-size-lg){
                 .box-1, .box-2, .box-3, .box-4 {
                     @include set-box (48%, 250px);
                     margin-bottom: 15px;
@@ -195,7 +239,7 @@
                     @include set-box (80%, 250px);
                     margin-bottom: 20px;
                 }
-            }
+            }  
         }
     }
 }
