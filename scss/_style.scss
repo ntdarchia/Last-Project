@@ -192,7 +192,7 @@
             }
             @media (max-width: $container-size-medium) {
                 .box-1, .box-2, .box-3, .box-4 {
-                    @include set-box (70%, 250px);
+                    @include set-box (80%, 250px);
                     margin-bottom: 20px;
                 }
             }
@@ -209,16 +209,9 @@
             margin: 100px;
         }
         .services-section-wrapper {
-            @include display-flex ($direction: row, $justify: space-around, $align: center);
             .services-section-text-wrapper {
                 h2, p {
                     margin-bottom: 30px;
-                }
-                h2 {
-                    @include text-style ($montserrat-font, $heading-2-size, normal, bold, 55px, 2px, $heading-color-01);
-                }
-                p {
-                    @include text-style ($main-font, $paragraph-size, normal, 400, 30px, 0px, $paragraph-color);
                 }
                 button {
                     @extend .button-basic;
@@ -231,7 +224,12 @@
                     }
                 }
             }
-            .services-section-banner {
+        } 
+    }
+    @media (min-width: 1024px) {
+        .services-section-wrapper {
+             @include display-flex (row, space-around, center);
+             .services-section-banner {
                 position: relative;
                 img {
                     @include set-rounded-image;
@@ -244,8 +242,62 @@
                     right: -50px;
                 }
             }
+            .services-section-text-wrapper {
+                margin-bottom: 80px;
+                h2 {
+                    @include text-style ($montserrat-font, $heading-2-size, normal, bold, 55px, 2px, $heading-color-01);
+                }
+                p {
+                    @include text-style ($main-font, $paragraph-size, normal, 400, 30px, 0px, $paragraph-color);
+                }
+            }
         } 
     }
+    @media (max-width: 1024px) {
+        .services-section-wrapper {
+            @include display-flex (column, center, center);
+            .services-section-banner {
+               position: relative;
+               img {
+                   @include set-rounded-image (450px, 450px);
+                   opacity: 0.9;
+               }
+               .ball-2 {
+                   @include set-ball (150px, 150px, $ball-2-color);
+                   position: absolute;
+                   bottom: -50px;
+                   right: 0px;
+               }
+           }
+       }
+        .services-section-text-wrapper {
+            margin-bottom: 80px;
+            h2 {
+                @include text-style ($montserrat-font, $heading-4-size, normal, bold, 55px, 1px, $heading-color-01);
+            }
+            p {
+                @include text-style ($main-font, $paragraph-responsive-size, normal, 400, 30px, 0px, $paragraph-color);
+            }
+        }        
+    }
+    @media (max-width: $container-size-medium) {
+        .services-section-banner {
+            position: relative;
+            img {
+                @include set-rounded-image (350px, 350px);
+                opacity: 0.9;
+            }
+            .ball-2 {
+                @include set-ball (100px, 100px, $ball-2-color);
+                position: absolute;
+                bottom: -50px;
+                right: 0px;
+            }
+        }
+    }
+
+
+
 }
 .section-3 {
     margin-top: 100px;
@@ -262,9 +314,6 @@
             .text-wrapper {
                 @include display-flex (row, end, center);
                 padding: 50px;
-                .empty-div, .text-div {
-                    width: 50%;
-                }
                 .text-div {
                     h3, p, .section-link {
                         margin-bottom: 30px;
@@ -303,25 +352,54 @@
                     }
                 }
             }
-            .banner-image {
-                position: absolute;
-                .image-div {
-                    position: relative;
-                    bottom: 300px;
-                    right: 100px;
-                    img {
-                        @include set-rounded-image;
-                        filter: blur(0.7px);
+        }
+    }
+    @media (min-width: 1024px) {
+        .empty-div, .text-div {
+            width: 50%;
+        }
+        .banner-image {
+            position: absolute;
+            .image-div {
+                position: relative;
+                bottom: 300px;
+                right: 100px;
+                img {
+                    @include set-rounded-image;
+                    filter: blur(0.7px);
+                }
+                .overlay-div {
+                    @include set-ball (150px, 150px, $ball-3-color); 
+                    position: absolute;
+                    bottom: -15px;
+                    left: 400px;
                     }
-                    .overlay-div {
-                        @include set-ball (150px, 150px, $ball-3-color); 
-                        position: absolute;
-                        bottom: -15px;
-                        left: 400px;
-                        }
+                }
+            } 
+    }
+    @media (max-width: 1024px) {
+        .text-div {
+            width: 100%;
+        }
+        .banner-image {
+            position: absolute;
+            .image-div {
+                position: relative;
+                bottom: 20px;
+                right: 100px;
+                img {
+                    @include set-rounded-image (450px, 450px);
+                    filter: blur(0.7px);
+                }
+                .overlay-div {
+                    @include set-ball (100px, 100px, $ball-3-color); 
+                    position: absolute;
+                    bottom: -15px;
+                    left: 400px;
                     }
-                }  
-            }
+                }
+            } 
+        
     }
 }
 // Start Tours Section
@@ -463,40 +541,9 @@
     padding: 50px;
     .container {
         @extend %container;
-        .section-heading, .section-main-paragraph, h2, p {
-            text-align: right;
-            margin-bottom: 30px;
-        }
-        .section-heading {
-            @include text-style ($roboto-bold, 24px, normal, bold, 24px, 10px, $black-color);
-        }
-        .section-main-paragraph {
-            @include text-style ($main-font, $paragraph-size, normal, 400, 24px, 0px, $paragraph-color);
-        }
         .section-banner-wrapper {
-            margin-top: 100px;
-            @include display-flex (row, space-around, $align: center);
-            .banner-image {
-                position: relative;
-                img {
-                    @include set-rounded-image;
-                }
-                .ball-4 {
-                    @include set-ball (180px, 180px, $ball-2-color); 
-                    position: absolute;
-                    left: 20px;
-                    bottom: -50px;
-                }
-            }
             .section-text-wrapper {
-                h2 {
-                    @include text-style ($montserrat-font, $heading-2-size, normal, bold, 55px, 2px, $heading-color-01);
-                }
-                p {
-                    @include text-style ($main-font, $paragraph-size, normal, 400, 30px, 0px, $paragraph-color);
-                }
                 .btn-div {
-                    text-align: right;
                     button {
                         @extend .button-basic;
                         @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, $black-color);
@@ -509,6 +556,88 @@
                     }
                 }
             }
+        }
+        @media (min-width: 1024px) {
+            .section-heading, .section-main-paragraph, h2, p {
+                text-align: right;
+                margin-bottom: 30px;
+            }
+            .section-heading {
+                @include text-style ($roboto-bold, 24px, normal, bold, 24px, 10px, $black-color);
+            }
+            .section-main-paragraph {
+                @include text-style ($main-font, $paragraph-size, normal, 400, 24px, 0px, $paragraph-color);
+            }
+            .section-banner-wrapper {
+                margin-top: 100px;
+                @include display-flex (row, space-around, center);
+                .banner-image {
+                    position: relative;
+                    img {
+                        @include set-rounded-image;
+                    }
+                    .ball-4 {
+                        @include set-ball (180px, 180px, $ball-2-color); 
+                        position: absolute;
+                        left: 20px;
+                        bottom: -50px;
+                    }
+                }
+                .section-text-wrapper {
+                    h2 {
+                        @include text-style ($montserrat-font, $heading-2-size, normal, bold, 55px, 2px, $heading-color-01);
+                    }
+                    p {
+                        @include text-style ($main-font, $paragraph-size, normal, 400, 30px, 0px, $paragraph-color);
+                    }
+                    .btn-div {
+                        text-align: right;
+                    }
+                }
+            }       
+        }
+        @media (max-width: 1024px) {
+            .section-heading, .section-main-paragraph, h2, p {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .section-heading {
+                @include text-style ($roboto-bold, 20px, normal, bold, 24px, 5px, $black-color);
+            }
+            .section-main-paragraph {
+                @include text-style ($main-font, $paragraph-responsive-size, normal, 400, 24px, 0px, $paragraph-color);
+            }
+            .section-banner-wrapper {
+                @include display-flex (column, center, center);
+                .banner-image {
+                    position: relative;
+                    img {
+                        @include set-rounded-image(450px, 450px);
+                    }
+                    .ball-4 {
+                        @include set-ball (150px, 150px, $ball-2-color); 
+                        position: absolute;
+                        left: 20px;
+                        bottom: -50px;
+                    }
+                }
+                .section-text-wrapper {
+                    margin-top: 100px;
+                    h2, p {
+                        text-align: center;
+                    }
+                    h2 {
+                        @include text-style ($montserrat-font, $heading-4-size, normal, bold, 55px, 0px, $heading-color-01);
+                    }
+                    p {
+                        @include text-style ($main-font, $paragraph-responsive-size, normal, 400, 30px, 0px, $paragraph-color);
+                    }
+                    .btn-div {
+                        text-align: center;
+                    }
+                }
+            }
+            
         }
     }
 }
@@ -563,15 +692,15 @@
                             opacity: 1;
                         }
                     }
-                    @media (min-width: $container-size-medium) {
-                        .date-tel-div {
-                            @include display-flex (row, space-between, end);
-                            width: 100%;
-                            .date-div, .phone-div {
-                                width: 48%;
-                            }
-                        }  
-                    }
+                    // @media (min-width: $container-size-medium) {
+                    //     .date-tel-div {
+                    //         @include display-flex (row, space-between, end);
+                    //         width: 100%;
+                    //         .date-div, .phone-div {
+                    //             width: 48%;
+                    //         }
+                    //     }  
+                    // }
                     
                     textarea {
                         resize: none;
@@ -594,7 +723,17 @@
                         }
                     }
                 }
-                @media (max-width: $container-size-lg) {
+                @media (min-width: $container-size-medium) {
+                    .date-tel-div {
+                        @include display-flex (row, space-between, end);
+                        width: 100%;
+                        .date-div, .phone-div {
+                            width: 48%;
+                        }
+                    }  
+                }
+                //$container-size-lg
+                @media (max-width: 830px ) {
                     .date-tel-div {
                         flex-direction: column;
                     }
@@ -632,11 +771,6 @@ footer {
             height: 2px;
             background-color: $footer-line-color;
         }
-        @media (min-width: $container-size-medium) {
-            .footer-text-wrapper {
-                @include display-flex (row, space-around, start);
-            }
-        }
         .footer-text-wrapper {
             h6 {
                 @include text-style ($main-font, $heading-6-size, normal, 400, 20px, 0px, #fff);
@@ -647,6 +781,11 @@ footer {
             text-align: center;
             @include text-style ($main-font, 14px, normal, 400, 30px, 0px, #fff);
 
+        }
+    }
+    @media (min-width: $container-size-medium) {
+        .footer-text-wrapper {
+            @include display-flex (row, space-around, start);
         }
     }
     @media (max-width: $container-size-medium) {

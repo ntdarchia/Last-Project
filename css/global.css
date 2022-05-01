@@ -143,6 +143,12 @@ a {
   margin: 0 auto;
 }
 
+@media (max-width: 1024px) {
+  .home-section .container, .services-section .container, .section-3 .container, .tours-section .container, .about-us .container, .contactUs-section .container, footer .container {
+    width: 90%;
+  }
+}
+
 .button-basic, .home-section .container .cover-image .cover-text button, .services-section .container .services-section-wrapper .services-section-text-wrapper button, .section-3 .container .section-3-wrapper .text-wrapper .text-div button, .tours-section .container .section-banner .text-wrapper button, .tours-section .container .slider-container .slider-item .body .sub_div button, .tours-section .container .apply-btn-div .apply-btn, .about-us .container .section-banner-wrapper .section-text-wrapper .btn-div button {
   background: none;
   border: none;
@@ -621,7 +627,7 @@ a {
 
 @media (max-width: 768px) {
   .home-section .container .home-section-box-wrapper .box-1, .home-section .container .home-section-box-wrapper .box-2, .home-section .container .home-section-box-wrapper .box-3, .home-section .container .home-section-box-wrapper .box-4 {
-    max-width: 70%;
+    max-width: 80%;
     width: 100%;
     height: 250px;
     margin-bottom: 20px;
@@ -640,45 +646,8 @@ a {
   margin: 100px;
 }
 
-.services-section .container .services-section-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .services-section .container .services-section-wrapper .services-section-text-wrapper h2, .services-section .container .services-section-wrapper .services-section-text-wrapper p {
   margin-bottom: 30px;
-}
-
-.services-section .container .services-section-wrapper .services-section-text-wrapper h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 55px;
-  letter-spacing: 2px;
-  color: #546166;
-}
-
-.services-section .container .services-section-wrapper .services-section-text-wrapper p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  letter-spacing: 0px;
-  color: #000000;
 }
 
 .services-section .container .services-section-wrapper .services-section-text-wrapper button {
@@ -699,25 +668,142 @@ a {
   color: #fff;
 }
 
-.services-section .container .services-section-wrapper .services-section-banner {
-  position: relative;
+@media (min-width: 1024px) {
+  .services-section .services-section-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .services-section .services-section-wrapper .services-section-banner {
+    position: relative;
+  }
+  .services-section .services-section-wrapper .services-section-banner img {
+    border-radius: 50%;
+    width: 550px;
+    height: 550px;
+    opacity: 0.9;
+  }
+  .services-section .services-section-wrapper .services-section-banner .ball-2 {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    background-color: #aec5cd;
+    position: absolute;
+    bottom: -90px;
+    right: -50px;
+  }
+  .services-section .services-section-wrapper .services-section-text-wrapper {
+    margin-bottom: 80px;
+  }
+  .services-section .services-section-wrapper .services-section-text-wrapper h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 55px;
+    letter-spacing: 2px;
+    color: #546166;
+  }
+  .services-section .services-section-wrapper .services-section-text-wrapper p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    color: #000000;
+  }
 }
 
-.services-section .container .services-section-wrapper .services-section-banner img {
-  border-radius: 50%;
-  width: 550px;
-  height: 550px;
-  opacity: 0.9;
+@media (max-width: 1024px) {
+  .services-section .services-section-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .services-section .services-section-wrapper .services-section-banner {
+    position: relative;
+  }
+  .services-section .services-section-wrapper .services-section-banner img {
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    opacity: 0.9;
+  }
+  .services-section .services-section-wrapper .services-section-banner .ball-2 {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: #aec5cd;
+    position: absolute;
+    bottom: -50px;
+    right: 0px;
+  }
+  .services-section .services-section-text-wrapper {
+    margin-bottom: 80px;
+  }
+  .services-section .services-section-text-wrapper h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 55px;
+    letter-spacing: 1px;
+    color: #546166;
+  }
+  .services-section .services-section-text-wrapper p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    color: #000000;
+  }
 }
 
-.services-section .container .services-section-wrapper .services-section-banner .ball-2 {
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  background-color: #aec5cd;
-  position: absolute;
-  bottom: -90px;
-  right: -50px;
+@media (max-width: 768px) {
+  .services-section .services-section-banner {
+    position: relative;
+  }
+  .services-section .services-section-banner img {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    opacity: 0.9;
+  }
+  .services-section .services-section-banner .ball-2 {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: #aec5cd;
+    position: absolute;
+    bottom: -50px;
+    right: 0px;
+  }
 }
 
 .section-3 {
@@ -751,10 +837,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   padding: 50px;
-}
-
-.section-3 .container .section-3-wrapper .text-wrapper .empty-div, .section-3 .container .section-3-wrapper .text-wrapper .text-div {
-  width: 50%;
 }
 
 .section-3 .container .section-3-wrapper .text-wrapper .text-div h3, .section-3 .container .section-3-wrapper .text-wrapper .text-div p, .section-3 .container .section-3-wrapper .text-wrapper .text-div .section-link {
@@ -838,32 +920,64 @@ a {
   color: #fff;
 }
 
-.section-3 .container .section-3-wrapper .banner-image {
-  position: absolute;
+@media (min-width: 1024px) {
+  .section-3 .empty-div, .section-3 .text-div {
+    width: 50%;
+  }
+  .section-3 .banner-image {
+    position: absolute;
+  }
+  .section-3 .banner-image .image-div {
+    position: relative;
+    bottom: 300px;
+    right: 100px;
+  }
+  .section-3 .banner-image .image-div img {
+    border-radius: 50%;
+    width: 550px;
+    height: 550px;
+    -webkit-filter: blur(0.7px);
+            filter: blur(0.7px);
+  }
+  .section-3 .banner-image .image-div .overlay-div {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: #dce7ec;
+    position: absolute;
+    bottom: -15px;
+    left: 400px;
+  }
 }
 
-.section-3 .container .section-3-wrapper .banner-image .image-div {
-  position: relative;
-  bottom: 300px;
-  right: 100px;
-}
-
-.section-3 .container .section-3-wrapper .banner-image .image-div img {
-  border-radius: 50%;
-  width: 550px;
-  height: 550px;
-  -webkit-filter: blur(0.7px);
-          filter: blur(0.7px);
-}
-
-.section-3 .container .section-3-wrapper .banner-image .image-div .overlay-div {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  background-color: #dce7ec;
-  position: absolute;
-  bottom: -15px;
-  left: 400px;
+@media (max-width: 1024px) {
+  .section-3 .text-div {
+    width: 100%;
+  }
+  .section-3 .banner-image {
+    position: absolute;
+  }
+  .section-3 .banner-image .image-div {
+    position: relative;
+    bottom: 20px;
+    right: 100px;
+  }
+  .section-3 .banner-image .image-div img {
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    -webkit-filter: blur(0.7px);
+            filter: blur(0.7px);
+  }
+  .section-3 .banner-image .image-div .overlay-div {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: #dce7ec;
+    position: absolute;
+    bottom: -15px;
+    left: 400px;
+  }
 }
 
 .tours-section {
@@ -1127,93 +1241,6 @@ a {
   padding: 50px;
 }
 
-.about-us .container .section-heading, .about-us .container .section-main-paragraph, .about-us .container h2, .about-us .container p {
-  text-align: right;
-  margin-bottom: 30px;
-}
-
-.about-us .container .section-heading {
-  font-family: "robotobold", sans-serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 24px;
-  letter-spacing: 10px;
-  color: rgb 0, 0, 0;
-}
-
-.about-us .container .section-main-paragraph {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0px;
-  color: #000000;
-}
-
-.about-us .container .section-banner-wrapper {
-  margin-top: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.about-us .container .section-banner-wrapper .banner-image {
-  position: relative;
-}
-
-.about-us .container .section-banner-wrapper .banner-image img {
-  border-radius: 50%;
-  width: 550px;
-  height: 550px;
-}
-
-.about-us .container .section-banner-wrapper .banner-image .ball-4 {
-  border-radius: 50%;
-  width: 180px;
-  height: 180px;
-  background-color: #aec5cd;
-  position: absolute;
-  left: 20px;
-  bottom: -50px;
-}
-
-.about-us .container .section-banner-wrapper .section-text-wrapper h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 55px;
-  letter-spacing: 2px;
-  color: #546166;
-}
-
-.about-us .container .section-banner-wrapper .section-text-wrapper p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  letter-spacing: 0px;
-  color: #000000;
-}
-
-.about-us .container .section-banner-wrapper .section-text-wrapper .btn-div {
-  text-align: right;
-}
-
 .about-us .container .section-banner-wrapper .section-text-wrapper .btn-div button {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -1230,6 +1257,172 @@ a {
 .about-us .container .section-banner-wrapper .section-text-wrapper .btn-div button:hover {
   background-color: #80939a;
   color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .about-us .container .section-heading, .about-us .container .section-main-paragraph, .about-us .container h2, .about-us .container p {
+    text-align: right;
+    margin-bottom: 30px;
+  }
+  .about-us .container .section-heading {
+    font-family: "robotobold", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: 10px;
+    color: rgb 0, 0, 0;
+  }
+  .about-us .container .section-main-paragraph {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #000000;
+  }
+  .about-us .container .section-banner-wrapper {
+    margin-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-us .container .section-banner-wrapper .banner-image {
+    position: relative;
+  }
+  .about-us .container .section-banner-wrapper .banner-image img {
+    border-radius: 50%;
+    width: 550px;
+    height: 550px;
+  }
+  .about-us .container .section-banner-wrapper .banner-image .ball-4 {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    background-color: #aec5cd;
+    position: absolute;
+    left: 20px;
+    bottom: -50px;
+  }
+  .about-us .container .section-banner-wrapper .section-text-wrapper h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 55px;
+    letter-spacing: 2px;
+    color: #546166;
+  }
+  .about-us .container .section-banner-wrapper .section-text-wrapper p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    color: #000000;
+  }
+  .about-us .container .section-banner-wrapper .section-text-wrapper .btn-div {
+    text-align: right;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-us .container .section-heading, .about-us .container .section-main-paragraph, .about-us .container h2, .about-us .container p {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .about-us .container .section-heading {
+    font-family: "robotobold", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: 5px;
+    color: rgb 0, 0, 0;
+  }
+  .about-us .container .section-main-paragraph {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #000000;
+  }
+  .about-us .container .section-banner-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-us .container .section-banner-wrapper .banner-image {
+    position: relative;
+  }
+  .about-us .container .section-banner-wrapper .banner-image img {
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+  }
+  .about-us .container .section-banner-wrapper .banner-image .ball-4 {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: #aec5cd;
+    position: absolute;
+    left: 20px;
+    bottom: -50px;
+  }
+  .about-us .container .section-banner-wrapper .section-text-wrapper {
+    margin-top: 100px;
+  }
+  .about-us .container .section-banner-wrapper .section-text-wrapper h2, .about-us .container .section-banner-wrapper .section-text-wrapper p {
+    text-align: center;
+  }
+  .about-us .container .section-banner-wrapper .section-text-wrapper h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 55px;
+    letter-spacing: 0px;
+    color: #546166;
+  }
+  .about-us .container .section-banner-wrapper .section-text-wrapper p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    color: #000000;
+  }
+  .about-us .container .section-banner-wrapper .section-text-wrapper .btn-div {
+    text-align: center;
+  }
 }
 
 .contactUs-section {
@@ -1364,30 +1557,6 @@ a {
   opacity: 1;
 }
 
-@media (min-width: 768px) {
-  .contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper .date-tel-div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
-    width: 100%;
-  }
-  .contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper .date-tel-div .date-div, .contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper .date-tel-div .phone-div {
-    width: 48%;
-  }
-}
-
 .contactUs-section .container .section-banner-image .section-overlay-div .form-wrapper textarea {
   resize: none;
   height: 100px;
@@ -1457,7 +1626,31 @@ a {
   color: #fff;
 }
 
-@media (max-width: 992px) {
+@media (min-width: 768px) {
+  .contactUs-section .container .section-banner-image .section-overlay-div .date-tel-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    width: 100%;
+  }
+  .contactUs-section .container .section-banner-image .section-overlay-div .date-tel-div .date-div, .contactUs-section .container .section-banner-image .section-overlay-div .date-tel-div .phone-div {
+    width: 48%;
+  }
+}
+
+@media (max-width: 830px) {
   .contactUs-section .container .section-banner-image .section-overlay-div .date-tel-div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1497,25 +1690,6 @@ footer .container .footer-line {
   background-color: #6e6e6e;
 }
 
-@media (min-width: 768px) {
-  footer .container .footer-text-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-  }
-}
-
 footer .container .footer-text-wrapper h6 {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -1536,6 +1710,25 @@ footer .container .rights-reserved-div {
   line-height: 30px;
   letter-spacing: 0px;
   color: #fff;
+}
+
+@media (min-width: 768px) {
+  footer .footer-text-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
 }
 
 @media (max-width: 768px) {
