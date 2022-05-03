@@ -1,3 +1,21 @@
+var func = {
+  showMenu: function() {
+    var menuBlock = $('#menuBlock'),
+        body = $('body');
+    menuBlock.css({'display': 'block'});
+    menuBlock.find('.menu').show('slide');
+    body.css({'overflow-y': 'hidden'});
+  },
+  hideMenu: function() {
+    var menuBlock = $('#menuBlock'),
+        body = $('body');
+    menuBlock.find('.menu').hide('slide', function() {
+      menuBlock.css({'display': 'none'});
+    });
+    body.css({'overflow-y': 'auto'});
+  }
+}
+
 $(document).ready(function() {
   var options = {
     infinite: true,
@@ -49,11 +67,11 @@ $(document).ready(function() {
 // Sidebar
 
 
-	const menu_btn = document.querySelector('.hamburger');
+	// const menu_btn = document.querySelector('.hamburger');
 
-	menu_btn.addEventListener('click', function () {
-		menu_btn.classList.toggle('is-active');
-	});
+	// menu_btn.addEventListener('click', function () {
+	// 	menu_btn.classList.toggle('is-active');
+	// });
 
 
 

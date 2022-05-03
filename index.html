@@ -17,38 +17,38 @@
     <link href="https://kenwheeler.github.io/slick/slick/slick-theme.css" rel="stylesheet"/>
 </head>
 <body>
-    <!-- <header>
-        <div class="headerDiv">
-            <a href="#">ADVENTURE</a>
-            <div class="nav-wrapper">
-                <ul>
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a href="#tours">Tours</a>
-                    </li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#contact-us">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header> -->
-    
-    
-    <!-- new -->
-    <button class="hamburger is-active">
-        <div class="bar"></div>
-    </button>
- 
 
+<header>
+    <div class="headerDiv">
+        <a href="#">ADVENTURE</a>
+        <button class="hamburger" onclick="func.showMenu()">
+            <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+        </button>
+    </div>
+    <div id="menuBlock" class="menu-block">
+        <div class="blade" onclick="func.hideMenu()"></div>
+        <div class="menu">
+            <svg onclick="func.hideMenu()" height="30px" id="Layer_1" style="fill: #fff; enable-background:new 0 0 30 30;" version="1.1" viewBox="0 0 512 512" width="30px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M443.6,387.1L312.4,255.4l131.5-130c5.4-5.4,5.4-14.2,0-19.6l-37.4-37.6c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4  L256,197.8L124.9,68.3c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4L68,105.9c-5.4,5.4-5.4,14.2,0,19.6l131.5,130L68.4,387.1  c-2.6,2.6-4.1,6.1-4.1,9.8c0,3.7,1.4,7.2,4.1,9.8l37.4,37.6c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1L256,313.1l130.7,131.1  c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1l37.4-37.6c2.6-2.6,4.1-6.1,4.1-9.8C447.7,393.2,446.2,389.7,443.6,387.1z"/></svg>
+            <ul>
+                <li>
+                    <a href="#home" onclick="func.hideMenu()">Home</a>
+                </li>
+                <li>
+                    <a href="#services" onclick="func.hideMenu()">Services</a>
+                </li>
+                <li>
+                    <a href="#tours" onclick="func.hideMenu()">Tours</a>
+                </li>
+                <li>
+                    <a href="#about" onclick="func.hideMenu()">About</a>
+                </li>
+                <li>
+                    <a href="#contact-us" onclick="func.hideMenu()" >Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
 
 <!-- Cover -->
     <section class="cover-section">
@@ -185,7 +185,24 @@
 <!-- Start Tours Section -->
     <section class="tours-section" id="tours">
         <div class="container">
-            <div class="section-banner">
+            <div class="section-main-div">
+                <div class="text-wrapper">
+                    <h4>11 tours available</h4>
+                    <p>Sample text. Click to select the text box. Click<br>
+                        again or double click to start editing the text.</p>
+                    <button>BOOK NOW</button>
+                </div>
+                <div class="empty-div"></div>
+                <div class="banner-image-div">
+                    <div class="banner-image">
+                        <img src="./images/yellow-house.jpg" alt="Banner Image">
+                    </div>
+                    <div class="overlay-image">
+                        <img src="./images/mountains.jpg" alt="Mountains Image">
+                    </div>                
+                </div>
+            </div>
+            <!-- <div class="section-banner">
                 <div class="text-wrapper">
                     <h4>11 tours available</h4>
                     <p>Sample text. Click to select the text box. Click<br>
@@ -202,7 +219,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="text-div">
                 <h2>Book With Confidence</h2>
                 <h4>Only 10% deposit required : Cancellation</h4>
@@ -387,6 +404,7 @@
     </footer>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 	<script src="slick.min.js"></script>
 	<script src="script.js"></script>
 </body>
