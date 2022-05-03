@@ -297,7 +297,8 @@
             }
         } 
     }
-    @media (max-width: 1024px) {
+    // @media (max-width: 1024px) 
+    @media (min-width: $container-size-medium) and (max-width: 1024px){
         .services-section-wrapper {
             @include display-flex (column, center, center);
             .services-section-banner {
@@ -332,28 +333,34 @@
                 opacity: 0.9;
             }
             .ball-2 {
-                @include set-ball (100px, 100px, $ball-2-color);
+                @include set-ball (120px, 120px, $ball-2-color);
                 position: absolute;
-                bottom: -50px;
-                right: 0px;
+                bottom: -30px;
+                left: 220px;
             }
         }
+        .services-section-text-wrapper {
+            margin-bottom: 80px;
+            h2 {
+                @include text-style ($montserrat-font, $heading-4-size, normal, bold, 55px, 1px, $heading-color-01);
+            }
+            p {
+                @include text-style ($main-font, $paragraph-responsive-size, normal, 400, 30px, 0px, $paragraph-color);
+            }
+        } 
     }
-
-
-
 }
 .section-3 {
     margin-top: 100px;
     padding: 50px;
     background-color: $section-3-bg;
-    height: 750px;
     .container {
         @extend %container;
         .section-3-wrapper {
             position: relative;
             background-color: #fff;
             width: 80%;
+            min-width: 290px;
             margin: 0px auto;
             .text-wrapper {
                 @include display-flex (row, end, center);
@@ -399,6 +406,7 @@
         }
     }
     @media (min-width: 1024px) {
+        height: 750px;
         .empty-div, .text-div {
             width: 50%;
         }
@@ -418,32 +426,62 @@
                     bottom: -15px;
                     left: 400px;
                     }
-                }
-            } 
+            }
+        } 
     }
-    @media (max-width: 1024px) {
+    @media (min-width: $container-size-medium) and (max-width: 1024px) {
+        height: 950px;
         .text-div {
             width: 100%;
+            button {
+                margin-bottom: 50px;
+            }
         }
         .banner-image {
             position: absolute;
             .image-div {
                 position: relative;
-                bottom: 20px;
-                right: 100px;
+                bottom: 52px;
+                right: 80px;
                 img {
                     @include set-rounded-image (450px, 450px);
                     filter: blur(0.7px);
                 }
                 .overlay-div {
+                    @include set-ball (150px, 150px, $ball-3-color); 
+                    position: absolute;
+                    bottom: -25px;
+                    left: 325px;
+                }
+            }
+        } 
+    }
+    @media (max-width: $container-size-medium) {
+        height: 950px;
+        .text-div {
+            width: 100%;
+            button {
+                margin-bottom: 40px;
+            }
+        }
+        .banner-image {
+            position: absolute;
+            .image-div {
+                position: relative;
+                bottom: 45px;
+                right: 60px;
+                img {
+                    @include set-rounded-image (350px, 350px);
+                    filter: blur(0.7px);
+                }
+                .overlay-div {
                     @include set-ball (100px, 100px, $ball-3-color); 
                     position: absolute;
-                    bottom: -15px;
-                    left: 400px;
-                    }
+                    bottom: -25px;
+                    left: 255px;
                 }
-            } 
-        
+            }
+        } 
     }
 }
 // Start Tours Section
@@ -457,6 +495,7 @@
             margin-right: 5%;
             .text-wrapper {
                 position: absolute;
+                // top: 20px;
                 left: 200px;
                 z-index: 1;
                 width: 35%;
@@ -563,7 +602,7 @@
                 
             .grow:hover { 
                 transform: scale(1.05); 
-                }
+            }
         }
         .apply-btn-div {
             text-align: center;
@@ -579,6 +618,14 @@
             }
         }
     }
+    @media (min-width: 1024px) {
+    }
+      
+    @media (max-width: 1024px) {
+        
+    }
+        
+    
 }
 // Start About Us Section
 .about-us {
@@ -640,7 +687,7 @@
                 }
             }       
         }
-        @media (max-width: 1024px) {
+        @media (min-width: $container-size-medium) and (max-width: 1024px) {
             .section-heading, .section-main-paragraph, h2, p {
                 text-align: center;
                 margin-bottom: 30px;
@@ -660,6 +707,48 @@
                     }
                     .ball-4 {
                         @include set-ball (150px, 150px, $ball-2-color); 
+                        position: absolute;
+                        left: 20px;
+                        bottom: -50px;
+                    }
+                }
+                .section-text-wrapper {
+                    margin-top: 100px;
+                    h2, p {
+                        text-align: center;
+                    }
+                    h2 {
+                        @include text-style ($montserrat-font, $heading-4-size, normal, bold, 55px, 0px, $heading-color-01);
+                    }
+                    p {
+                        @include text-style ($main-font, $paragraph-responsive-size, normal, 400, 30px, 0px, $paragraph-color);
+                    }
+                    .btn-div {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        @media (max-width: $container-size-medium) {
+            .section-heading, .section-main-paragraph, h2, p {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .section-heading {
+                @include text-style ($roboto-bold, 20px, normal, bold, 24px, 5px, $black-color);
+            }
+            .section-main-paragraph {
+                @include text-style ($main-font, $paragraph-responsive-size, normal, 400, 24px, 0px, $paragraph-color);
+            }
+            .section-banner-wrapper {
+                @include display-flex (column, center, center);
+                .banner-image {
+                    position: relative;
+                    img {
+                        @include set-rounded-image(350px, 350px);
+                    }
+                    .ball-4 {
+                        @include set-ball (120px, 120px, $ball-2-color); 
                         position: absolute;
                         left: 20px;
                         bottom: -50px;

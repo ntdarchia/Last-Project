@@ -788,7 +788,7 @@ a {
   }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .services-section .services-section-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -859,12 +859,33 @@ a {
   }
   .services-section .services-section-banner .ball-2 {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background-color: #aec5cd;
     position: absolute;
-    bottom: -50px;
-    right: 0px;
+    bottom: -30px;
+    left: 220px;
+  }
+  .services-section .services-section-text-wrapper {
+    margin-bottom: 80px;
+  }
+  .services-section .services-section-text-wrapper h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 55px;
+    letter-spacing: 1px;
+    color: #546166;
+  }
+  .services-section .services-section-text-wrapper p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    color: #000000;
   }
 }
 
@@ -872,13 +893,13 @@ a {
   margin-top: 100px;
   padding: 50px;
   background-color: #c4d6dc;
-  height: 750px;
 }
 
 .section-3 .container .section-3-wrapper {
   position: relative;
   background-color: #fff;
   width: 80%;
+  min-width: 290px;
   margin: 0px auto;
 }
 
@@ -983,6 +1004,9 @@ a {
 }
 
 @media (min-width: 1024px) {
+  .section-3 {
+    height: 750px;
+  }
   .section-3 .empty-div, .section-3 .text-div {
     width: 50%;
   }
@@ -1012,17 +1036,23 @@ a {
   }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section-3 {
+    height: 950px;
+  }
   .section-3 .text-div {
     width: 100%;
+  }
+  .section-3 .text-div button {
+    margin-bottom: 50px;
   }
   .section-3 .banner-image {
     position: absolute;
   }
   .section-3 .banner-image .image-div {
     position: relative;
-    bottom: 20px;
-    right: 100px;
+    bottom: 52px;
+    right: 80px;
   }
   .section-3 .banner-image .image-div img {
     border-radius: 50%;
@@ -1033,12 +1063,48 @@ a {
   }
   .section-3 .banner-image .image-div .overlay-div {
     border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: #dce7ec;
+    position: absolute;
+    bottom: -25px;
+    left: 325px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-3 {
+    height: 950px;
+  }
+  .section-3 .text-div {
+    width: 100%;
+  }
+  .section-3 .text-div button {
+    margin-bottom: 40px;
+  }
+  .section-3 .banner-image {
+    position: absolute;
+  }
+  .section-3 .banner-image .image-div {
+    position: relative;
+    bottom: 45px;
+    right: 60px;
+  }
+  .section-3 .banner-image .image-div img {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    -webkit-filter: blur(0.7px);
+            filter: blur(0.7px);
+  }
+  .section-3 .banner-image .image-div .overlay-div {
+    border-radius: 50%;
     width: 100px;
     height: 100px;
     background-color: #dce7ec;
     position: absolute;
-    bottom: -15px;
-    left: 400px;
+    bottom: -25px;
+    left: 255px;
   }
 }
 
@@ -1401,7 +1467,7 @@ a {
   }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .about-us .container .section-heading, .about-us .container .section-main-paragraph, .about-us .container h2, .about-us .container p {
     text-align: center;
     margin-bottom: 30px;
@@ -1453,6 +1519,92 @@ a {
     border-radius: 50%;
     width: 150px;
     height: 150px;
+    background-color: #aec5cd;
+    position: absolute;
+    left: 20px;
+    bottom: -50px;
+  }
+  .about-us .container .section-banner-wrapper .section-text-wrapper {
+    margin-top: 100px;
+  }
+  .about-us .container .section-banner-wrapper .section-text-wrapper h2, .about-us .container .section-banner-wrapper .section-text-wrapper p {
+    text-align: center;
+  }
+  .about-us .container .section-banner-wrapper .section-text-wrapper h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 55px;
+    letter-spacing: 0px;
+    color: #546166;
+  }
+  .about-us .container .section-banner-wrapper .section-text-wrapper p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    color: #000000;
+  }
+  .about-us .container .section-banner-wrapper .section-text-wrapper .btn-div {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us .container .section-heading, .about-us .container .section-main-paragraph, .about-us .container h2, .about-us .container p {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .about-us .container .section-heading {
+    font-family: "robotobold", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: 5px;
+    color: rgb 0, 0, 0;
+  }
+  .about-us .container .section-main-paragraph {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #000000;
+  }
+  .about-us .container .section-banner-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-us .container .section-banner-wrapper .banner-image {
+    position: relative;
+  }
+  .about-us .container .section-banner-wrapper .banner-image img {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+  }
+  .about-us .container .section-banner-wrapper .banner-image .ball-4 {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
     background-color: #aec5cd;
     position: absolute;
     left: 20px;
