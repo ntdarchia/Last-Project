@@ -149,7 +149,7 @@ a {
   }
 }
 
-.button-basic, .cover-section .cover-wrapper .cover-text button, .services-section .container .services-section-wrapper .services-section-text-wrapper button, .section-3 .container .section-3-wrapper .text-wrapper .text-div button, .tours-section .container .section-main-div .text-wrapper button, .tours-section .container .slider-container .slider-item .body .sub_div button, .tours-section .container .apply-btn-div .apply-btn, .about-us .container .section-banner-wrapper .section-text-wrapper .btn-div button {
+.button-basic, .cover-section .cover-wrapper .cover-text button, .services-section .container .services-section-wrapper .services-section-text-wrapper button, .section-3 .container .section-3-wrapper .text-wrapper .text-div button, .tours-section .container .tours-section-wrapper .tours-section-text-wrapper button, .tours-section .container .slider-container .slider-item .body .sub_div button, .tours-section .container .apply-btn-div .apply-btn, .about-us .container .section-banner-wrapper .section-text-wrapper .btn-div button {
   background: none;
   border: none;
   padding: 20px 45px;
@@ -1077,7 +1077,7 @@ header .menu-block .menu ul li > a:hover {
     background-color: #dce7ec;
     position: absolute;
     bottom: -25px;
-    left: 255px;
+    right: -10px;
   }
 }
 
@@ -1086,7 +1086,7 @@ header .menu-block .menu ul li > a:hover {
   background-color: #f2f2f2;
 }
 
-.tours-section .container .section-main-div .text-wrapper button {
+.tours-section .container .tours-section-wrapper .tours-section-text-wrapper button {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -1099,7 +1099,7 @@ header .menu-block .menu ul li > a:hover {
   background-color: #aec5cd;
 }
 
-.tours-section .container .section-main-div .text-wrapper button:hover {
+.tours-section .container .tours-section-wrapper .tours-section-text-wrapper button:hover {
   background-color: #80939a;
   color: #fff;
 }
@@ -1115,7 +1115,7 @@ header .menu-block .menu ul li > a:hover {
   font-size: 48px;
   font-style: normal;
   font-weight: bold;
-  line-height: 40px;
+  line-height: 48px;
   letter-spacing: 1px;
   color: #546166;
 }
@@ -1126,7 +1126,7 @@ header .menu-block .menu ul li > a:hover {
   font-size: 36px;
   font-style: normal;
   font-weight: 300;
-  line-height: 30px;
+  line-height: 36px;
   letter-spacing: 0px;
   color: #181818;
 }
@@ -1255,19 +1255,24 @@ header .menu-block .menu ul li > a:hover {
 }
 
 @media (min-width: 1024px) {
-  .tours-section .section-main-div {
-    position: relative;
+  .tours-section .tours-section-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
   }
-  .tours-section .section-main-div .text-wrapper {
+  .tours-section .tours-section-wrapper .tours-section-text-wrapper {
     position: absolute;
     left: 60px;
     bottom: 70px;
@@ -1276,10 +1281,10 @@ header .menu-block .menu ul li > a:hover {
     padding: 40px;
     z-index: 1;
   }
-  .tours-section .section-main-div .text-wrapper h4, .tours-section .section-main-div .text-wrapper p, .tours-section .section-main-div .text-wrapper button {
+  .tours-section .tours-section-wrapper .tours-section-text-wrapper h4, .tours-section .tours-section-wrapper .tours-section-text-wrapper p, .tours-section .tours-section-wrapper .tours-section-text-wrapper button {
     margin-bottom: 20px;
   }
-  .tours-section .section-main-div .text-wrapper h4 {
+  .tours-section .tours-section-wrapper .tours-section-text-wrapper h4 {
     font-family: "Montserrat", sans-serif;
     font-size: 36px;
     font-style: normal;
@@ -1288,7 +1293,7 @@ header .menu-block .menu ul li > a:hover {
     letter-spacing: 1px;
     color: #000;
   }
-  .tours-section .section-main-div .text-wrapper p {
+  .tours-section .tours-section-wrapper .tours-section-text-wrapper p {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -1297,60 +1302,61 @@ header .menu-block .menu ul li > a:hover {
     letter-spacing: 0px;
     color: #000000;
   }
-  .tours-section .section-main-div .empty-div {
-    width: 25%;
-    height: 300px;
+  .tours-section .tours-section-wrapper .empty-div {
+    width: 30%;
+    height: 400px;
   }
-  .tours-section .section-main-div .banner-image-div {
+  .tours-section .tours-section-wrapper .tours-section-banner {
     position: relative;
   }
-  .tours-section .section-main-div .banner-image-div .banner-image img {
+  .tours-section .tours-section-wrapper .tours-section-banner .main-img {
     border-radius: 50%;
-    width: 530px;
-    height: 530px;
-    position: relative;
-    opacity: 0.9;
+    width: 550px;
+    height: 550px;
     border: solid 20px #fff;
+    opacity: 0.9;
   }
-  .tours-section .section-main-div .banner-image-div .overlay-image {
-    position: absolute;
-    bottom: -15px;
-    left: -30px;
-  }
-  .tours-section .section-main-div .banner-image-div .overlay-image img {
+  .tours-section .tours-section-wrapper .tours-section-banner .overlay-img {
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
-    opacity: 1;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    bottom: -50px;
+    left: -100px;
   }
 }
 
-@media (max-width: 1024px) {
-  .tours-section .section-main-div {
-    position: relative;
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tours-section .tours-section-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
   }
-  .tours-section .section-main-div .text-wrapper {
+  .tours-section .tours-section-wrapper .tours-section-text-wrapper {
     position: absolute;
     left: 60px;
     top: 10px;
     background-color: #fff;
     min-width: 280px;
     padding: 30px;
-    z-index: 1;
   }
-  .tours-section .section-main-div .text-wrapper h4, .tours-section .section-main-div .text-wrapper p, .tours-section .section-main-div .text-wrapper button {
+  .tours-section .tours-section-wrapper .tours-section-text-wrapper h4, .tours-section .tours-section-wrapper .tours-section-text-wrapper p, .tours-section .tours-section-wrapper .tours-section-text-wrapper button {
     margin-bottom: 20px;
   }
-  .tours-section .section-main-div .text-wrapper h4 {
+  .tours-section .tours-section-wrapper .tours-section-text-wrapper h4 {
     font-family: "Montserrat", sans-serif;
     font-size: 36px;
     font-style: normal;
@@ -1359,7 +1365,7 @@ header .menu-block .menu ul li > a:hover {
     letter-spacing: 0px;
     color: #000;
   }
-  .tours-section .section-main-div .text-wrapper p {
+  .tours-section .tours-section-wrapper .tours-section-text-wrapper p {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     font-style: normal;
@@ -1368,62 +1374,64 @@ header .menu-block .menu ul li > a:hover {
     letter-spacing: 0px;
     color: #000000;
   }
-  .tours-section .section-main-div .text-wrapper button {
+  .tours-section .tours-section-wrapper .tours-section-text-wrapper button {
     margin-bottom: 40px;
   }
-  .tours-section .section-main-div .empty-div {
-    width: 25%;
-    height: 300px;
+  .tours-section .tours-section-wrapper .empty-div {
+    width: 30%;
+    height: 400px;
   }
-  .tours-section .section-main-div .banner-image-div {
+  .tours-section .tours-section-wrapper .tours-section-banner {
     position: relative;
   }
-  .tours-section .section-main-div .banner-image-div .banner-image img {
+  .tours-section .tours-section-wrapper .tours-section-banner .main-img {
     border-radius: 50%;
-    width: 450px;
-    height: 450px;
-    opacity: 0.9;
+    width: 350px;
+    height: 350px;
     border: solid 20px #fff;
+    opacity: 0.9;
   }
-  .tours-section .section-main-div .banner-image-div .overlay-image {
-    position: absolute;
-    bottom: -30px;
-    left: -30px;
-  }
-  .tours-section .section-main-div .banner-image-div .overlay-image img {
+  .tours-section .tours-section-wrapper .tours-section-banner .overlay-img {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    opacity: 1;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: -40px;
+    left: -30px;
   }
 }
 
 @media (max-width: 768px) {
-  .tours-section .section-main-div {
-    position: relative;
+  .tours-section .tours-section-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
   }
-  .tours-section .section-main-div .text-wrapper {
+  .tours-section .tours-section-wrapper .tours-section-text-wrapper {
     position: absolute;
     left: 10px;
     top: 10px;
     background-color: #fff;
     min-width: 280px;
     padding: 30px;
-    z-index: 1;
   }
-  .tours-section .section-main-div .text-wrapper h4, .tours-section .section-main-div .text-wrapper p, .tours-section .section-main-div .text-wrapper button {
+  .tours-section .tours-section-wrapper .tours-section-text-wrapper h4, .tours-section .tours-section-wrapper .tours-section-text-wrapper p, .tours-section .tours-section-wrapper .tours-section-text-wrapper button {
     margin-bottom: 20px;
   }
-  .tours-section .section-main-div .text-wrapper h4 {
+  .tours-section .tours-section-wrapper .tours-section-text-wrapper h4 {
     font-family: "Montserrat", sans-serif;
     font-size: 36px;
     font-style: normal;
@@ -1432,7 +1440,7 @@ header .menu-block .menu ul li > a:hover {
     letter-spacing: 0px;
     color: #000;
   }
-  .tours-section .section-main-div .text-wrapper p {
+  .tours-section .tours-section-wrapper .tours-section-text-wrapper p {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     font-style: normal;
@@ -1441,33 +1449,30 @@ header .menu-block .menu ul li > a:hover {
     letter-spacing: 0px;
     color: #000000;
   }
-  .tours-section .section-main-div .text-wrapper button {
+  .tours-section .tours-section-wrapper .tours-section-text-wrapper button {
     margin-bottom: 40px;
   }
-  .tours-section .section-main-div .empty-div {
-    width: 25%;
-    height: 400px;
+  .tours-section .tours-section-wrapper .empty-div {
+    width: 30%;
+    height: 350px;
   }
-  .tours-section .section-main-div .banner-image-div {
+  .tours-section .tours-section-wrapper .tours-section-banner {
     position: relative;
   }
-  .tours-section .section-main-div .banner-image-div .banner-image img {
+  .tours-section .tours-section-wrapper .tours-section-banner .main-img {
     border-radius: 50%;
     width: 300px;
     height: 300px;
-    opacity: 0.9;
     border: solid 20px #fff;
+    opacity: 0.9;
   }
-  .tours-section .section-main-div .banner-image-div .overlay-image {
-    position: absolute;
-    bottom: -30px;
-    left: -30px;
-  }
-  .tours-section .section-main-div .banner-image-div .overlay-image img {
+  .tours-section .tours-section-wrapper .tours-section-banner .overlay-img {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    opacity: 1;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
   }
 }
 

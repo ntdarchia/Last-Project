@@ -91,7 +91,7 @@ header {
                         background-color: #fff;
                         color: black;
                     }
-                }
+            }
         }
     }
     @media (min-width: 850px) {
@@ -281,7 +281,6 @@ header {
             }
         } 
     }
-    // @media (max-width: 1024px) 
     @media (min-width: $container-size-medium) and (max-width: 1024px){
         .services-section-wrapper {
             @include display-flex (column, center, center);
@@ -460,7 +459,7 @@ header {
                     @include set-ball (100px, 100px, $ball-3-color); 
                     position: absolute;
                     bottom: -25px;
-                    left: 255px;
+                    right: -10px;
                 }
             }
         } 
@@ -472,30 +471,8 @@ header {
     background-color: $tours-section-bg;
     .container {
         @extend %container;
-        .section-main-div {
-            // position: relative;
-            // display: flex;
-            // flex-direction: row;
-            // justify-content: space-around;
-
-            .text-wrapper {
-                // position: absolute;
-                // left: 60px;
-                // bottom: 70px;
-                // background-color: #fff;
-                // width: 37%;
-                // padding: 40px;
-                // z-index: 1;
-
-                // h4, p, button {
-                //     margin-bottom: 20px;
-                // }
-                // h4 {
-                //     @include text-style ($montserrat-font, $heading-4-size, normal, bold, 36px, 1px, $heading-color-02);
-                // }
-                // p {
-                //     @include text-style ($main-font, $paragraph-size, normal, 400, 25px, 0px, $paragraph-color);
-                // }
+        .tours-section-wrapper {
+            .tours-section-text-wrapper {
                 button {
                     @extend .button-basic;
                     @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, $black-color);
@@ -507,113 +484,17 @@ header {
                     }
                 }
             } 
-        // .empty-div {
-        //     width: 25%;
-        //     height: 300px;
-        // }
-
-         // width: 70%;
-         // height: 500px;
-
-
-        // .banner-image-div {
-        //     .white-div {
-        //         border-radius: 50%;
-        //         padding: 20px;
-        //         background-color: #fff;
-        //         .banner-image {
-        //             position: relative;
-        //             justify-content: flex-end;
-        //                 img {
-        //                     @include set-rounded-image (530px, 530px);
-        //                     position: relative;
-        //                     opacity: 0.9;
-        //                 }
-        //         }
-        //     }
-        //     .overlay-image {
-        //         position: absolute;
-        //         bottom: -15px;
-        //         left: 460px;
-        //         img {
-        //             @include set-rounded-image (250px, 250px);
-        //             opacity: 1;
-        //         }
-        //     }
-        // }
-
-
         }
-        
-        
-        
-       
-        // .section-banner {
-        //     @include display-flex (row, end, center);
-        //     margin-right: 5%;
-        //     .text-wrapper {
-        //         position: absolute;
-        //         left: 200px;
-        //         z-index: 1;
-        //         width: 35%;
-        //         padding: 40px;
-        //         margin-left: -100px;
-        //         background-color: #fff;
-        //         h4, p, button {
-        //             margin-bottom: 20px;
-        //         }
-        //         h4 {
-        //             @include text-style ($montserrat-font, $heading-4-size, normal, bold, 36px, 1px, $heading-color-02);
-        //         }
-        //         p {
-        //             @include text-style ($main-font, $paragraph-size, normal, 400, 25px, 0px, $paragraph-color);
-        //         }
-        //         button {
-        //             @extend .button-basic;
-        //             @include text-style ($main-font, $btn-text-size, normal, bold, 20px, 2px, $black-color);
-        //             @include transition-ease-in-out;
-        //             background-color: $tours-section-btn;
-        //             &:hover {
-        //                 background-color: $tours-section-btn-hover;
-        //                 color: #fff;
-        //             }
-        //         }
-        //     }
-        //     .banner-wrapper {
-        //         position: relative;
-        //         .white-div {
-        //             border-radius: 50%;
-        //             padding: 20px;
-        //             background-color: #fff;
-        //             .image-div {
-        //                 img {
-        //                     @include set-rounded-image;
-        //                     position: relative;
-        //                     opacity: 0.9;
-        //                 }
-        //                 .overlay-image {
-        //                     position: absolute;
-        //                     bottom: -20px;
-        //                     left: -90px;
-        //                     img {
-        //                         @include set-rounded-image (300px, 300px);
-        //                         opacity: 1;
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
         .text-div {
             margin: 150px auto;
             text-align: center;
             h2 {
                 margin-bottom: 30px;
-                @include text-style ($roboto-bold, $heading-2-size, normal, bold, 40px, 1px, $heading-color-01);
+                @include text-style ($roboto-bold, $heading-2-size, normal, bold, 48px, 1px, $heading-color-01);
             }
             h4 {
                 margin-bottom: 20px;
-                @include text-style ($main-font, $heading-4-size, normal, 300, 30px, 0px, $heading-color-03);
+                @include text-style ($main-font, $heading-4-size, normal, 300, 36px, 0px, $heading-color-03);
             }
         }
         // slider section
@@ -674,14 +555,13 @@ header {
                 }
             }
         }
+// end of slider section
     }
     @media (min-width: 1024px) {
-        .section-main-div {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            .text-wrapper {
+        .tours-section-wrapper {
+             @include display-flex (row, space-around, center);
+             position: relative;
+             .tours-section-text-wrapper {
                 position: absolute;
                 left: 60px;
                 bottom: 70px;
@@ -697,49 +577,40 @@ header {
                 }
                 p {
                     @include text-style ($main-font, $paragraph-size, normal, 400, 25px, 0px, $paragraph-color);
-                }
-            }
-            .empty-div {
-                width: 25%;
-                height: 300px;
-            }
-            .banner-image-div {
-                position: relative;
-                .banner-image {
-                        img {
-                            @include set-rounded-image (530px, 530px);
-                            position: relative;
-                            opacity: 0.9;
-                            border: solid 20px #fff;
-                        }
-                }
-                .overlay-image {
-                    position: absolute;
-                    bottom: -15px;
-                    left: -30px;
-                    img {
-                        @include set-rounded-image (250px, 250px);
-                        opacity: 1;
                     }
                 }
+             .empty-div {
+                 width: 30%;
+                 height: 400px;
+             }
+             .tours-section-banner {
+                position: relative;
+                .main-img {
+                    @include set-rounded-image;
+                    border: solid 20px #fff;
+                    opacity: 0.9;
+                }
+                .overlay-img {
+                    @include set-rounded-image (300px, 300px);
+                    position: absolute;
+                    bottom: -50px;
+                    left: -100px;
+                }
             }
-        }
+        } 
     }
-    @media (max-width: 1024px) {
-        .section-main-div {
+    @media (min-width: $container-size-medium) and (max-width: 1024px){
+        .tours-section-wrapper {
+            @include display-flex (column, center, center);
             position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            .text-wrapper {
+            .tours-section-text-wrapper{
                 position: absolute;
                 left: 60px;
                 top: 10px;
                 background-color: #fff;
                 min-width: 280px;
                 padding: 30px;
-                z-index: 1;
-
+                // z-index: 1;
                 h4, p, button {
                     margin-bottom: 20px;
                 }
@@ -754,44 +625,37 @@ header {
                 }
             }
             .empty-div {
-                width: 25%;
-                height: 300px;
+                width: 30%;
+                height: 400px;
             }
-            .banner-image-div {
-                position: relative;
-                .banner-image {
-                    img {
-                        @include set-rounded-image (450px, 450px);
-                        opacity: 0.9;
-                        border: solid 20px #fff;
-                    }
-                }
-                .overlay-image {
-                    position: absolute;
-                    bottom: -30px;
-                    left: -30px;
-                    img {
-                        @include set-rounded-image (200px, 200px);
-                        opacity: 1;
-                    }
-                }
-            }
-        } 
+            .tours-section-banner {
+               position: relative;
+               .main-img {
+                   @include set-rounded-image (350px, 350px);
+                   border: solid 20px #fff;
+                   opacity: 0.9;
+               }
+               .overlay-img {
+                   @include set-rounded-image (150px, 150px);
+                   position: absolute;
+                   bottom: -40px;
+                   left: -30px;
+               }
+           }
+       }       
     }
     @media (max-width: $container-size-medium) {
-        .section-main-div {
+        .tours-section-wrapper {
+            @include display-flex (column, center, center);
             position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            .text-wrapper {
+            .tours-section-text-wrapper {
                 position: absolute;
                 left: 10px;
                 top: 10px;
                 background-color: #fff;
                 min-width: 280px;
                 padding: 30px;
-                z-index: 1;
+                // z-index: 1;
 
                 h4, p, button {
                     margin-bottom: 20px;
@@ -807,29 +671,24 @@ header {
                 }
             }
             .empty-div {
-                width: 25%;
-                height: 400px;
+                width: 30%;
+                height: 350px;
             }
-            .banner-image-div {
+            .tours-section-banner {
                 position: relative;
-                .banner-image {
-                    img {
-                        @include set-rounded-image (300px, 300px);
-                        opacity: 0.9;
-                        border: solid 20px #fff;
-                    }
+                .main-img {
+                    @include set-rounded-image (300px, 300px);
+                    border: solid 20px #fff;
+                    opacity: 0.9;
                 }
-                .overlay-image {
+                .overlay-img {
+                    @include set-rounded-image (120px, 120px);
                     position: absolute;
-                    bottom: -30px;
-                    left: -30px;
-                    img {
-                        @include set-rounded-image (150px, 150px);
-                        opacity: 1;
-                    }
+                    bottom: -10px;
+                    left: -10px;
                 }
             }
-        } 
+        }
     }
 }
 // Start About Us Section
