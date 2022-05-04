@@ -151,7 +151,7 @@ header {
                 margin-bottom: 30px;
             }
             h3 {
-                @include text-style ($roboto-bold, 50px, normal, 500, 30px, 3px, $heading-color-02);
+                @include text-style ($roboto-bold, 50px, normal, 500, 50px, 3px, $heading-color-02);
             }
             p {
                 @include text-style ($main-font, $paragraph-size, italic, 400, 22px, 0px, $paragraph-color);
